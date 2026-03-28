@@ -165,6 +165,8 @@ def run_pipeline():
     emailer.send(
         subject=f"Weekly Market Economist Brief — {week_label}",
         html_body=email_html,
+        attachment_html=browser_html,
+        attachment_name=f"market_brief_{today.isoformat()}.html",
 
 
     )
