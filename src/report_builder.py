@@ -75,7 +75,7 @@ class ReportBuilder:
                 chart_html += f"""
                 <div class="chart-container">
                     <div class="chart-title">{cs.get('title', '')}</div>
-                    <canvas id="{chart_id}" height="200"></canvas>
+                    <canvas id="{chart_id}" height="140"></canvas>
                     <div class="chart-interpretation">{cs.get('interpretation', '')}</div>
                 </div>"""
 
@@ -467,7 +467,7 @@ body {{
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 0;max-height:240px;overflow:hidden;
 }}
 .chart-title {{
     font-family: var(--font-sans);
