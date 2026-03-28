@@ -29,14 +29,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("agent")
 
-
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
-
-# RSS feeds – curated for macro / markets / central-bank coverage
 RSS_FEEDS = {
-    # --- Central Banks & Official Sources ---
     "Federal Reserve":          "https://www.federalreserve.gov/feeds/press_all.xml",
     "Fed Speeches":             "https://www.federalreserve.gov/feeds/speeches.xml",
     "ECB Press":                "https://www.ecb.europa.eu/rss/press.html",
@@ -44,21 +37,15 @@ RSS_FEEDS = {
     "BIS Research":             "https://www.bis.org/doclist/bis_fsi_publs.rss",
     "IMF Blog":                 "https://www.imf.org/en/Blogs/rss",
     "IMF Working Papers":       "https://www.imf.org/en/Publications/RSS?type=WP",
-
-    # --- Government / Data Releases ---
     "US Treasury":              "https://home.treasury.gov/system/files/136/treasury-rss.xml",
     "BLS Press Releases":       "https://www.bls.gov/feed/bls_latest.rss",
     "BEA News":                 "https://www.bea.gov/rss/rss.xml",
     "Census Economic Indicators": "https://www.census.gov/economic-indicators/indicator.xml",
-
-    # --- Financial Journalism ---
     "Reuters Business":         "https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best",
     "FT Markets":               "https://www.ft.com/markets?format=rss",
     "WSJ Markets":              "https://feeds.a]wsj.com/wsj/xml/rss/3_7031.xml",
     "Bloomberg Markets":        "https://feeds.bloomberg.com/markets/news.rss",
     "CNBC Economy":             "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258",
-
-    # --- Research & Analysis ---
     "Brookings Economics":      "https://www.brookings.edu/topic/economy/feed/",
     "NBER New Papers":          "https://www.nber.org/rss/new.xml",
     "PIIE":                     "https://www.piie.com/rss.xml",
@@ -71,57 +58,40 @@ RSS_FEEDS = {
     "Chicago Fed":              "https://www.chicagofed.org/rss/publications",
 }
 
-# FRED series for automated data pulls
 FRED_SERIES = {
-    # --- Rates & Yields ---
     "DFF":      "Fed Funds Effective Rate",
     "DGS2":     "2-Year Treasury Yield",
     "DGS10":    "10-Year Treasury Yield",
-    "T10Y2Y":   "10Y–2Y Spread (Yield Curve)",
-    "T10Y3M":   "10Y–3M Spread",
+    "T10Y2Y":   "10Y-2Y Spread (Yield Curve)",
+    "T10Y3M":   "10Y-3M Spread",
     "BAMLH0A0HYM2": "High Yield OAS Spread",
-
-    # --- Inflation ---
     "CPIAUCSL": "CPI (All Urban Consumers)",
     "CPILFESL": "Core CPI (ex Food & Energy)",
     "PCEPILFE": "Core PCE Price Index",
     "MICH":     "U of Michigan Inflation Expectations",
     "T5YIE":    "5-Year Breakeven Inflation",
     "T10YIE":   "10-Year Breakeven Inflation",
-
-    # --- Labor Market ---
     "UNRATE":   "Unemployment Rate",
     "PAYEMS":   "Total Nonfarm Payrolls",
     "ICSA":     "Initial Jobless Claims",
     "JTSJOL":   "JOLTS Job Openings",
-
-    # --- Activity & Output ---
     "GDP":      "Real GDP",
     "INDPRO":   "Industrial Production",
     "RSXFS":    "Retail Sales (ex Food Services)",
     "UMCSENT":  "Consumer Sentiment (UMich)",
-
-    # --- Money & Credit ---
     "M2SL":     "M2 Money Supply",
     "TOTRESNS": "Total Bank Reserves",
     "WALCL":    "Fed Balance Sheet (Total Assets)",
-
-    # --- Housing ---
     "HOUST":    "Housing Starts",
     "CSUSHPISA":"Case-Shiller Home Price Index",
-
-    # --- Financial Conditions ---
     "NFCI":     "Chicago Fed National Financial Conditions",
     "VIXCLS":   "VIX (Volatility Index)",
     "DTWEXBGS": "Trade-Weighted USD Index (Broad)",
     "DCOILWTICO":"WTI Crude Oil Price",
     "GOLDAMGBD228NLBM": "Gold Price (London Fix)",
-
-    # --- Global ---
     "GEPUCURRENT": "Global Economic Policy Uncertainty",
 }
 
-# Topics the search API should look for each week
 SEARCH_TOPICS = [
     "Federal Reserve monetary policy this week",
     "US economic data releases this week",
@@ -139,18 +109,14 @@ SEARCH_TOPICS = [
 
 
 def run_pipeline():
-    """Execute the full research agent pipeline."""
     today = datetime.date.today()
     report_date = today.strftime("%B %d, %Y")
     week_label = f"Week of {today.strftime('%B %d, %Y')}"
 
     logger.info(f"=== Starting Financial Market Economist Agent — {report_date} ===")
 
-    # ------------------------------------------------------------------
-    # 1  COLLECT
-    # ------------------------------------------------------------------
+    # 1 COLLECT
     logger.info("Phase 1: Collecting data from all sources...")
-
     rss = RSSCollector(feeds=RSS_FEEDS, lookback_days=7)
     rss_articles = rss.collect()
     logger.info(f"  RSS: {len(rss_articles)} articles")
@@ -163,11 +129,8 @@ def run_pipeline():
     fred_data = fred.collect()
     logger.info(f"  FRED: {len(fred_data)} data series")
 
-    # ------------------------------------------------------------------
-    # 2  SYNTHESIZE
-    # ------------------------------------------------------------------
+    # 2 SYNTHESIZE
     logger.info("Phase 2: Synthesizing research via Claude...")
-
     synthesizer = ReportSynthesizer()
     report_content = synthesizer.synthesize(
         rss_articles=rss_articles,
@@ -177,20 +140,26 @@ def run_pipeline():
     )
     logger.info("  Synthesis complete.")
 
-    # ------------------------------------------------------------------
-    # 3  BUILD REPORT
-    # ------------------------------------------------------------------
+    # 3 BUILD REPORT
     logger.info("Phase 3: Rendering charts and building reports...")
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    charts_dir = output_dir / "charts"
+    charts_dir.mkdir(exist_ok=True)
 
-    # Render charts as static PNGs (Gmail can't run JavaScript)
     charts = render_fred_charts(
         sections=report_content.get("sections", []),
         fred_data=fred_data,
+        output_dir=str(charts_dir),
     )
     logger.info(f"  Rendered {len(charts)} charts as PNG images")
 
-    # Build Gmail-compatible email (inline styles, embedded chart images)
-    email_builder = EmailReportBuilder()
+    github_repo = os.environ.get("GITHUB_REPO", "parmida-ctrl/market-economist-agent")
+    owner = github_repo.split("/")[0]
+    repo_name = github_repo.split("/")[1] if "/" in github_repo else github_repo
+    chart_base_url = f"https://{owner}.github.io/{repo_name}/charts"
+
+    email_builder = EmailReportBuilder(chart_base_url=chart_base_url)
     email_html = email_builder.build(
         content=report_content,
         charts=charts,
@@ -198,7 +167,6 @@ def run_pipeline():
         week_label=week_label,
     )
 
-    # Also build the interactive browser version (Chart.js, dark theme)
     browser_builder = ReportBuilder()
     browser_html = browser_builder.build(
         content=report_content,
@@ -207,21 +175,15 @@ def run_pipeline():
         week_label=week_label,
     )
 
-    # Save both versions
-    output_dir = Path("output")
-    output_dir.mkdir(exist_ok=True)
     (output_dir / f"market_brief_{today.isoformat()}_email.html").write_text(email_html, encoding="utf-8")
     (output_dir / f"market_brief_{today.isoformat()}_browser.html").write_text(browser_html, encoding="utf-8")
-    logger.info(f"  Reports saved → {output_dir}")
+    logger.info(f"  Reports saved")
 
-    # ------------------------------------------------------------------
-    # 4  EMAIL
-    # ------------------------------------------------------------------
+    # 4 EMAIL
     logger.info("Phase 4: Emailing report...")
-
     emailer = ReportEmailer()
     emailer.send(
-        subject=f"📊 Weekly Market Economist Brief — {week_label}",
+        subject=f"Weekly Market Economist Brief — {week_label}",
         html_body=email_html,
     )
 

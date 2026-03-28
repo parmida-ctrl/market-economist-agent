@@ -2,11 +2,7 @@ name: Weekly Market Economist Brief
 
 on:
   schedule:
-    # Every Saturday at 7:00 AM ET (11:00 UTC)
-    # Adjust for daylight saving: EDT = UTC-4, EST = UTC-5
     - cron: '0 11 * * 6'
-
-  # Allow manual trigger for testing
   workflow_dispatch:
 
 env:
@@ -16,10 +12,12 @@ env:
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   REPORT_EMAIL_TO: ${{ secrets.REPORT_EMAIL_TO }}
   REPORT_EMAIL_FROM: ${{ secrets.REPORT_EMAIL_FROM }}
-  # Optional fallback SMTP
   SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
   SMTP_HOST: ${{ secrets.SMTP_HOST }}
   SMTP_PORT: ${{ secrets.SMTP_PORT }}
+
+permissions:
+  contents: write
 
 jobs:
   generate-report:
@@ -41,7 +39,22 @@ jobs:
 
       - name: Run research agent
         working-directory: src
+        env:
+          GITHUB_REPO: ${{ github.repository }}
         run: python agent.py
+
+      - name: Publish charts to GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p docs/charts
+          if [ -d src/output/charts ]; then
+            cp src/output/charts/*.png docs/charts/ 2>/dev/null || true
+          fi
+          cp src/output/*_browser.html docs/index.html 2>/dev/null || true
+          git add docs/
+          git diff --staged --quiet || git commit -m "Update weekly brief — $(date +%Y-%m-%d)"
+          git push
 
       - name: Archive report
         uses: actions/upload-artifact@v4
