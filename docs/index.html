@@ -190,7 +190,7 @@ body {
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 0;max-height:240px;overflow:hidden;
 }
 .chart-title {
     font-family: var(--font-sans);
@@ -356,240 +356,205 @@ body {
 
     <div class="exec-summary">
         <h2>Executive Summary</h2>
-        <p>Global markets were rocked this week by the outbreak of war between the US and Iran on February 28, sending oil prices surging to $114/barrel and triggering widespread risk-off sentiment across asset classes. The Federal Reserve held rates steady at 3.50-3.75% on March 18, acknowledging 'uncertain' impacts from the conflict while maintaining a cautious stance on future policy moves. European Central Bank officials similarly expressed concern about energy price shocks potentially derailing the disinflationary process. The crisis has fundamentally altered the macro landscape, with Secretary of State Rubio indicating the conflict could persist for 2-4 weeks, raising stagflationary risks as traditional 60-40 portfolios suffer their worst month since 2022. Against this backdrop of geopolitical turmoil, Federal Reserve officials continued emphasizing the need for balance sheet reduction, while ECB wage tracker data showed continued moderation in negotiated wage growth, providing some relief on the inflation front before the energy shock hit.</p>
+        <p>The week of March 23-28, 2026 was defined by a dramatic geopolitical shock that sent ripple effects through global markets and central bank thinking. The outbreak of war in Iran on February 28th—noted by ECB surveys as occurring after 97% of consumer responses were recorded—has fundamentally altered the policy landscape for major central banks. Oil prices spiked to $114, marking the highest levels since 2022, while traditional safe havens failed to provide shelter as both stocks and bonds sold off in tandem. The Federal Reserve held rates steady at 3.50-3.75% on March 18th, with Chair Powell citing 'uncertain impacts from Iran war' as a key factor. Meanwhile, the ECB faces its most significant energy shock since the Russia-Ukraine conflict, with President Lagarde acknowledging that 'we find ourselves yet again in a different world.' The week crystallized a new reality: central banks must navigate the dual challenge of geopolitical energy shocks while maintaining price stability, with markets pricing increasing stagflationary risks ahead.</p>
     </div>
 
     
             <section class="report-section">
-                <h2>🏛️ Monetary Policy Under Geopolitical Stress</h2>
+                <h2>🏦 Central Bank Policy Under Geopolitical Stress</h2>
                 <div class="section-body">
-                    <div class="analysis-text">The Federal Reserve held rates unchanged at 3.50-3.75% at its March 18 meeting, with the decision taking on heightened significance given the Iran conflict that erupted just weeks prior. Fed officials explicitly noted the 'uncertain' impacts from the war, marking a rare direct acknowledgment of geopolitical events in policy communications. Vice Chair Jefferson emphasized that while the economy continues growing with resilient consumers and healthy business investment, 'ongoing uncertainty over tariff policy and the recent jump in energy prices' complicate the inflation outlook. This represents a notable shift from the Fed's previous confidence in the disinflationary trajectory. The federal funds rate has remained at 3.64% since the decision, with markets now pricing in a more prolonged period of policy uncertainty. Fed Governor Barr highlighted productivity gains from AI investments as a potential offset to energy-driven inflation pressures, but acknowledged these benefits may take time to materialize. The central bank's challenge has intensified dramatically - they must navigate between supporting growth amid geopolitical uncertainty while preventing energy price spirals from becoming embedded in broader inflation expectations. Fed Governor Miran's continued advocacy for balance sheet reduction faces new headwinds, as financial conditions have tightened materially with the VIX jumping to 27.44 and credit spreads widening. The traditional framework of data-dependent policy becomes more complex when geopolitical shocks dominate the economic narrative, forcing the Fed to rely more heavily on scenario planning and risk management approaches.</div>
+                    <div class="analysis-text">The Federal Reserve held the fed funds rate unchanged at 3.50-3.75% at its March 17-18 meeting, but the tone shifted dramatically toward acknowledging geopolitical uncertainty. The FOMC statement specifically referenced 'uncertain impacts from Iran war' - marking the first time in recent memory that an active military conflict was directly cited in policy guidance. Fed officials' speeches throughout the week reinforced this cautious stance, with Vice Chair Barr noting that 'these shocks have complicated the Committee's efforts to return inflation to our 2 percent goal.' The backdrop remains an economy showing resilience through substantial productivity growth and strong AI investment, but officials are clearly concerned about energy-driven inflation pressures. The ECB faces an even more acute challenge, with President Lagarde's March 25th speech acknowledging the profound uncertainty facing European policymakers. ECB consumer expectations show inflation expectations for 12 months ahead declining to 2.5% from 2.6%, but these surveys were largely conducted before the Iran conflict erupted. The central bank dilemma is stark: energy shocks typically require different policy responses than demand-driven inflation, yet the persistence and magnitude of this particular shock remains highly uncertain. Both the Fed and ECB are essentially in a 'wait and see' mode, gathering more data on how energy price increases translate to broader inflation pressures.</div>
                     <div class="data-chips">
                 <div class="data-chip">
                     <span class="chip-label">Fed Funds Rate</span>
                     <span class="chip-value">3.64%</span>
-                    <span class="chip-change" style="color:#6b7280">→ Unchanged</span>
+                    <span class="chip-change" style="color:#6b7280">→ Unchanged from prior week</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">2-Year Treasury</span>
-                    <span class="chip-value">3.96%</span>
-                    <span class="chip-change" style="color:#10b981">↑ +12 bps this week</span>
+                    <span class="chip-label">ECB Inflation Expectations (12M)</span>
+                    <span class="chip-value">2.5%</span>
+                    <span class="chip-change" style="color:#ef4444">↓ Down from 2.6% in January</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">10-Year Treasury</span>
+                    <span class="chip-label">10-Year Treasury Yield</span>
                     <span class="chip-value">4.42%</span>
-                    <span class="chip-change" style="color:#10b981">↑ +9 bps this week</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 9 bps from prior day</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">Yield Curve (10Y-2Y)</span>
-                    <span class="chip-value">0.56%</span>
-                    <span class="chip-change" style="color:#10b981">↑ +10 bps</span>
+                    <span class="chip-label">2-Year Treasury Yield</span>
+                    <span class="chip-value">3.96%</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 12 bps from prior day</span>
                 </div></div>
                     
                 <div class="chart-container">
-                    <div class="chart-title">Federal Funds Rate: Steady Amid Turmoil</div>
-                    <canvas id="chart_monetary_policy_under_geopolitical_stress_0" height="200"></canvas>
-                    <div class="chart-interpretation">Shows the Fed's commitment to policy stability despite external shocks</div>
+                    <div class="chart-title">Federal Funds Rate vs Oil Prices</div>
+                    <canvas id="chart_central_bank_policy_under_geopolitical_stress_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows how the Fed has typically responded to energy price shocks</div>
                 </div>
                 <div class="chart-container">
-                    <div class="chart-title">Yield Curve Steepening on Growth Concerns</div>
-                    <canvas id="chart_monetary_policy_under_geopolitical_stress_1" height="200"></canvas>
-                    <div class="chart-interpretation">Rising long-term yields reflect inflation fears while curve steepens on recession risk</div>
+                    <div class="chart-title">10-Year Treasury Yield</div>
+                    <canvas id="chart_central_bank_policy_under_geopolitical_stress_1" height="140"></canvas>
+                    <div class="chart-interpretation">Rising yields reflect both inflation fears and potential policy response</div>
                 </div>
                     
                 <div class="views-grid">
                     <div class="view-box consensus">
                         <div class="view-label">🎯 Consensus View</div>
-                        <p>Markets expect the Fed to remain on hold through at least Q2 2026 given geopolitical uncertainty, with potential for cuts later in the year if energy prices normalize and growth weakens. The consensus believes the Fed will prioritize financial stability over aggressive inflation fighting in the near term.</p>
+                        <p>Central banks will maintain current policy rates while closely monitoring second-round effects from energy price increases. The consensus expects measured responses given the external nature of the shock, with both the Fed and ECB likely to tolerate temporary inflation increases rather than risk recession through aggressive tightening.</p>
                     </div>
                     <div class="view-box contrarian">
                         <div class="view-label">⚡ Contrarian View</div>
-                        <p>If energy prices remain elevated and inflation expectations become unanchored, the Fed may need to hike rates despite growth concerns, echoing the Volcker playbook. The 2-4 week conflict timeline suggests rapid normalization could allow the Fed to resume easing as early as summer 2026.</p>
+                        <p>Energy shocks could prove more persistent and broad-based than expected, forcing central banks into difficult choices between fighting inflation and supporting growth. If oil remains above $100 and spreads to other commodities, central banks may need to tighten policy more aggressively to prevent de-anchoring of inflation expectations, especially given already-elevated core inflation levels.</p>
                     </div>
                 </div>
                 </div>
             </section>
 
             <section class="report-section">
-                <h2>⛽ Energy Shock & Stagflation Risks</h2>
+                <h2>⛽ Energy Markets and Stagflationary Pressures</h2>
                 <div class="section-body">
-                    <div class="analysis-text">Oil prices have surged to $114/barrel following the Iran conflict, representing a dramatic reversal from the sub-$90 levels seen earlier in March. WTI crude jumped from $83.71 on March 10 to peaks above $114, with Secretary of State Rubio warning that disruptions could persist for 2-4 weeks. The closure of the Strait of Hormuz has triggered acute supply concerns, with UK diesel stockpiles reportedly at risk of depletion by mid-May if the blockade continues. European jet fuel supplies are under particular strain as imports drop and inventories dwindle. This energy shock arrives at a particularly sensitive moment for central banks that had been gaining confidence in the disinflationary process. ECB President Lagarde noted that just weeks ago, euro area inflation stood at 1.9% in February with solid growth momentum, but the conflict has introduced 'profound uncertainty about the path of the economy.' The energy price surge threatens to reverse months of progress on core inflation, with 5-year breakeven inflation rates holding steady at 2.56% but showing signs of potential upward pressure. For European economies, the shock is particularly acute given their greater energy import dependence. The fertilizer market disruptions compound concerns about second-round effects through food prices. Unlike previous oil shocks, this one occurs against a backdrop of already-elevated service sector inflation and tight labor markets, potentially amplifying the stagflationary impact. The speed and magnitude of the price increase - from $83 to $114 in just over two weeks - suggests markets are pricing in extended disruption rather than a quick resolution.</div>
+                    <div class="analysis-text">The Iran conflict has created the most significant energy market disruption since the Russia-Ukraine war, with WTI crude oil reaching $114 per barrel - the highest level since 2022. More concerning for global supply chains, the conflict has effectively closed the Strait of Hormuz, through which roughly 20% of global oil flows. UK traders warn that diesel stockpiles could be depleted by mid-May if the strait remains closed, while European jet fuel supplies face similar pressures. The energy shock extends beyond oil to natural gas and refined products, creating a broad-based commodity inflation impulse. This represents a classic stagflationary setup: rising input costs that simultaneously boost inflation while constraining economic growth. The timing is particularly problematic given that core inflation measures remain elevated - U.S. core CPI at 333.5 (up 0.72% month-over-month) and core PCE at 128.4 (up 0.47% monthly). Energy price increases are already showing up in financial markets, with 5-year breakeven inflation expectations rising to 2.56%, though 10-year breakevens remain more contained at 2.31%. The key question becomes whether this energy shock proves transitory or persists long enough to become embedded in broader inflation expectations and wage negotiations. Historical precedent suggests energy shocks typically last 6-18 months, but the geopolitical nature of this disruption makes duration highly uncertain.</div>
                     <div class="data-chips">
                 <div class="data-chip">
                     <span class="chip-label">WTI Crude Oil</span>
-                    <span class="chip-value">$114/barrel</span>
-                    <span class="chip-change" style="color:#10b981">↑ +$25 since conflict start</span>
+                    <span class="chip-value">$89.33</span>
+                    <span class="chip-change" style="color:#10b981">↑ Down from $98.71 previous day but up significantly from pre-conflict</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">5Y Breakeven Inflation</span>
+                    <span class="chip-label">5-Year Breakeven Inflation</span>
                     <span class="chip-value">2.56%</span>
-                    <span class="chip-change" style="color:#6b7280">→ Stable but vulnerable</span>
+                    <span class="chip-change" style="color:#6b7280">→ Unchanged from prior day</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">VIX Volatility Index</span>
-                    <span class="chip-value">27.44</span>
-                    <span class="chip-change" style="color:#10b981">↑ +2.1 this week</span>
+                    <span class="chip-label">10-Year Breakeven Inflation</span>
+                    <span class="chip-value">2.31%</span>
+                    <span class="chip-change" style="color:#ef4444">↓ Down 3 bps</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">High Yield Credit Spread</span>
-                    <span class="chip-value">3.21%</span>
-                    <span class="chip-change" style="color:#10b981">↑ +4 bps</span>
+                    <span class="chip-label">High Yield Credit Spreads</span>
+                    <span class="chip-value">321 bps</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 4 bps</span>
                 </div></div>
                     
                 <div class="chart-container">
-                    <div class="chart-title">Oil Price Shock: From $83 to $114</div>
-                    <canvas id="chart_energy_shock_and_stagflation_risks_0" height="200"></canvas>
-                    <div class="chart-interpretation">Dramatic surge highlighting the speed and magnitude of the geopolitical premium</div>
+                    <div class="chart-title">WTI Crude Oil Price</div>
+                    <canvas id="chart_energy_markets_and_stagflationary_pressures_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows the sharp spike in oil prices following the Iran conflict</div>
                 </div>
                 <div class="chart-container">
-                    <div class="chart-title">Breakeven Inflation: Testing Central Bank Credibility</div>
-                    <canvas id="chart_energy_shock_and_stagflation_risks_1" height="200"></canvas>
-                    <div class="chart-interpretation">Market-based inflation expectations remain anchored but face upward pressure from energy shock</div>
+                    <div class="chart-title">5-Year Breakeven Inflation Expectations</div>
+                    <canvas id="chart_energy_markets_and_stagflationary_pressures_1" height="140"></canvas>
+                    <div class="chart-interpretation">Market-based measure of inflation expectations responding to energy shock</div>
                 </div>
                     
                 <div class="views-grid">
                     <div class="view-box consensus">
                         <div class="view-label">🎯 Consensus View</div>
-                        <p>Energy prices will normalize within 2-3 months as geopolitical tensions ease, causing a temporary inflation spike but avoiding sustained stagflation. Central banks will look through the energy shock while monitoring second-round effects.</p>
+                        <p>Energy price increases will prove largely transitory, with oil prices declining as alternative supply sources come online and strategic petroleum reserves are deployed. Central banks should look through the energy shock and focus on underlying inflation trends.</p>
                     </div>
                     <div class="view-box contrarian">
                         <div class="view-label">⚡ Contrarian View</div>
-                        <p>The conflict could escalate or extend beyond current projections, leading to sustained $120+ oil and triggering 1970s-style stagflation. This would force aggressive policy responses and potentially recession to break inflation expectations.</p>
+                        <p>The Iran conflict could prove more protracted than markets expect, keeping energy prices elevated for quarters rather than months. This could create persistent inflation pressures that force central banks into recession-inducing policy responses, similar to the 1970s energy crises.</p>
                     </div>
                 </div>
                 </div>
             </section>
 
             <section class="report-section">
-                <h2>🇪🇺 European Monetary Policy Divergence</h2>
+                <h2>📉 Financial Market Stress and Portfolio Disruption</h2>
                 <div class="section-body">
-                    <div class="analysis-text">The European Central Bank finds itself in a particularly challenging position, with the Iran conflict threatening to derail what had been encouraging disinflationary progress. ECB President Lagarde acknowledged that had the conflict not occurred, March forecasts would likely have revised growth up and inflation down, with euro area inflation at just 1.9% in February. The ECB wage tracker continues to show moderation in negotiated wage growth, declining to 2.3% for 2026 from 3.2% in 2025 - a crucial positive development that could provide some buffer against energy-driven price pressures. However, Vice President de Guindos warned that even in the most severe scenarios, while recession isn't expected, the energy shock will have 'strong impacts on both growth and inflation.' The ECB's consumer expectations survey for February showed median inflation expectations for the next 12 months and three years ahead both declining to 2.5% from 2.6%, though this data was collected before the conflict. The euro area's greater vulnerability to energy shocks compared to the US creates a more complex policy environment. Estonia's experience during the Ukraine crisis, when inflation reached 25%, serves as a stark reminder of how quickly energy shocks can spiral in energy-import dependent economies. The ECB's challenge is compounded by the need to balance multiple objectives: preventing energy price increases from becoming embedded while supporting growth and maintaining financial stability. The central bank's three-pillar approach - assessing shock persistence, identifying when energy costs threaten broader inflation, and maintaining credible anti-inflation policy - will be tested severely.</div>
+                    <div class="analysis-text">Financial markets experienced their most challenging week since 2022, with the traditional 60/40 portfolio of stocks and bonds failing spectacularly as both asset classes declined in tandem. The VIX volatility index spiked to 27.44, reflecting elevated fear levels, while credit spreads widened with high-yield OAS reaching 321 basis points. The simultaneous selloff in stocks and bonds - typically negatively correlated assets - signals a fundamental regime shift from the disinflationary environment that dominated 2023-2024. Bond investors face a particularly acute challenge as Treasury yields rose sharply across the curve: 2-year yields jumped 12 basis points to 3.96% while 10-year yields increased 9 basis points to 4.42%. The yield curve steepened modestly with the 10-2 spread widening to 56 basis points, though it remains relatively flat by historical standards. Currency markets showed dollar strength with the broad trade-weighted index at 120.28, as investors sought relative safety despite the U.S. being directly involved in the Middle East conflict. The Chicago Fed's National Financial Conditions Index at -0.48 suggests financial conditions remain accommodative, but this metric likely lags the rapid deterioration in market sentiment. Corporate credit markets are showing early signs of stress, with investment-grade spreads widening and high-yield issuance essentially frozen. The key concern is whether tighter financial conditions will become self-reinforcing, creating a negative feedback loop that amplifies the economic impact of the energy shock.</div>
                     <div class="data-chips">
                 <div class="data-chip">
-                    <span class="chip-label">Euro Area Inflation (Feb)</span>
-                    <span class="chip-value">1.9%</span>
-                    <span class="chip-change" style="color:#ef4444">↓ Pre-conflict reading</span>
+                    <span class="chip-label">VIX Volatility Index</span>
+                    <span class="chip-value">27.44</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 2.11 points</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">10Y-2Y Yield Spread</span>
+                    <span class="chip-value">0.56%</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 10 bps</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Dollar Index (Broad)</span>
+                    <span class="chip-value">120.28</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 0.10</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Chicago Fed NFCI</span>
+                    <span class="chip-value">-0.48</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 0.01 (less accommodative)</span>
+                </div></div>
+                    
+                <div class="chart-container">
+                    <div class="chart-title">VIX Volatility Index</div>
+                    <canvas id="chart_financial_market_stress_and_portfolio_disruption_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows elevated market stress levels following geopolitical shock</div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">10-Year vs 2-Year Yield Spread</div>
+                    <canvas id="chart_financial_market_stress_and_portfolio_disruption_1" height="140"></canvas>
+                    <div class="chart-interpretation">Curve steepening reflects changing inflation and policy expectations</div>
+                </div>
+                    
+                <div class="views-grid">
+                    <div class="view-box consensus">
+                        <div class="view-label">🎯 Consensus View</div>
+                        <p>Market stress reflects temporary geopolitical uncertainty that will subside as the conflict resolves. Financial conditions remain broadly supportive of growth, and any tightening will be offset by eventual central bank accommodation if economic conditions deteriorate meaningfully.</p>
+                    </div>
+                    <div class="view-box contrarian">
+                        <div class="view-label">⚡ Contrarian View</div>
+                        <p>The breakdown of stock-bond correlation signals a lasting regime change toward higher inflation and volatility. Financial conditions could tighten significantly if energy prices remain elevated, creating credit stress and forcing deleveraging across portfolios.</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="report-section">
+                <h2>👥 Labor Market Resilience Amid Uncertainty</h2>
+                <div class="section-body">
+                    <div class="analysis-text">The U.S. labor market continues to show remarkable resilience despite mounting economic uncertainties, though some cracks are beginning to emerge. The unemployment rate ticked up to 4.4% in February from 4.3% in January, while nonfarm payrolls actually declined by 92,000 - the first monthly decrease since the pandemic recovery period. Initial jobless claims remain contained at 210,000 for the week ending March 21, up modestly from 205,000 the prior week. JOLTS job openings surged to 6.946 million in January from 6.550 million in December, suggesting continued demand for workers. However, this juxtaposition of declining payrolls alongside rising job openings points to potential measurement issues or a rapidly changing labor market dynamic. The Federal Reserve officials have consistently noted that the labor market appears 'roughly in balance' but remains 'susceptible to adverse shocks' - a prescient observation given the energy crisis. European labor markets face even greater challenges, with the ECB's wage tracker showing negotiated wage growth of 3.2% for 2025 and projected to slow to 2.3% in 2026. This deceleration in European wage growth could provide some relief for ECB policymakers concerned about wage-price spirals. The key risk is whether energy-driven cost increases will lead to renewed wage demands, particularly in Europe where energy represents a larger share of household budgets. Historical experience suggests energy shocks typically lead to temporary spikes in unemployment as businesses adjust to higher input costs.</div>
+                    <div class="data-chips">
+                <div class="data-chip">
+                    <span class="chip-label">U.S. Unemployment Rate</span>
+                    <span class="chip-value">4.4%</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 0.1% from January</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Nonfarm Payrolls</span>
+                    <span class="chip-value">158,466K</span>
+                    <span class="chip-change" style="color:#ef4444">↓ Down 92K from January</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Initial Claims</span>
+                    <span class="chip-value">210K</span>
+                    <span class="chip-change" style="color:#10b981">↑ Up 5K from prior week</span>
                 </div>
                 <div class="data-chip">
                     <span class="chip-label">ECB Wage Tracker 2026</span>
                     <span class="chip-value">2.3%</span>
                     <span class="chip-change" style="color:#ef4444">↓ Down from 3.2% in 2025</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Consumer Inflation Expectations</span>
-                    <span class="chip-value">2.5%</span>
-                    <span class="chip-change" style="color:#ef4444">↓ Down 0.1pp (pre-conflict)</span>
                 </div></div>
                     
                 <div class="chart-container">
-                    <div class="chart-title">Global Economic Policy Uncertainty Index</div>
-                    <canvas id="chart_european_monetary_policy_divergence_0" height="200"></canvas>
-                    <div class="chart-interpretation">Measures the policy uncertainty facing European and global central banks</div>
+                    <div class="chart-title">U.S. Unemployment Rate</div>
+                    <canvas id="chart_labor_market_resilience_amid_uncertainty_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows gradual uptick in unemployment amid economic uncertainty</div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Initial Jobless Claims</div>
+                    <canvas id="chart_labor_market_resilience_amid_uncertainty_1" height="140"></canvas>
+                    <div class="chart-interpretation">Weekly indicator of labor market stress remaining relatively contained</div>
                 </div>
                     
                 <div class="views-grid">
                     <div class="view-box consensus">
                         <div class="view-label">🎯 Consensus View</div>
-                        <p>The ECB will pause further rate cuts and possibly hold rates steady through 2026 H1 to guard against energy-driven inflation, resuming easing once energy prices normalize and wages remain moderate.</p>
+                        <p>Labor market strength will persist through the energy shock, with unemployment rising only modestly as businesses maintain employment levels. Wage growth will decelerate gradually, helping to reduce inflationary pressures over time.</p>
                     </div>
                     <div class="view-box contrarian">
                         <div class="view-label">⚡ Contrarian View</div>
-                        <p>If energy shocks prove transitory and European growth weakens significantly, the ECB might need to cut rates despite temporary inflation spikes to prevent deflationary spiral and support demand.</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <section class="report-section">
-                <h2>📊 Balance Sheet Policy in Crisis</h2>
-                <div class="section-body">
-                    <div class="analysis-text">Federal Reserve Governor Miran's continued advocacy for balance sheet reduction faces new complications from the geopolitical crisis, highlighting the tension between normalization goals and crisis response capabilities. The Fed's balance sheet stands at $6.657 trillion, essentially unchanged from the previous week at $6.656 trillion, as policymakers maintain their quantitative tightening program despite market stress. Miran argued that shrinking the balance sheet remains desirable to move from 'abundant' to 'ample' reserves, estimating total bank reserves at $2.957 trillion in February. However, the Iran conflict introduces significant operational considerations - maintaining adequate liquidity facilities while pursuing balance sheet normalization becomes more complex when geopolitical shocks can trigger sudden liquidity demands. The Bank of England's decision to simplify and reduce pricing on its Discount Window Facility demonstrates how central banks are proactively strengthening their liquidity provision tools even while pursuing normalization. The BoE's move represents a 'second step in strengthening the provision of reserves through on-demand bilateral facilities,' following the December 2025 recalibration of the Operational Standing Facility. This contrasts with the Fed's continued quantitative tightening, raising questions about whether the US central bank should pause balance sheet reduction during periods of heightened geopolitical stress. The challenge is particularly acute given that financial conditions have tightened meaningfully - the Chicago Fed National Financial Conditions Index has moved less accommodative to -0.475, and credit spreads have widened. Governor Miran's framework for balance sheet policy - focusing on scarce, ample, and abundant reserves - may need updating to account for geopolitical risk premiums that can suddenly alter liquidity demand patterns.</div>
-                    <div class="data-chips">
-                <div class="data-chip">
-                    <span class="chip-label">Fed Balance Sheet</span>
-                    <span class="chip-value">$6.657 trillion</span>
-                    <span class="chip-change" style="color:#10b981">↑ +$1.2B this week</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Total Bank Reserves</span>
-                    <span class="chip-value">$2.957 trillion</span>
-                    <span class="chip-change" style="color:#ef4444">↓ -$11.3B from January</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Financial Conditions Index</span>
-                    <span class="chip-value">-0.475</span>
-                    <span class="chip-change" style="color:#10b981">↑ Less accommodative</span>
-                </div></div>
-                    
-                <div class="chart-container">
-                    <div class="chart-title">Fed Balance Sheet: Normalization vs Crisis Response</div>
-                    <canvas id="chart_balance_sheet_policy_in_crisis_0" height="200"></canvas>
-                    <div class="chart-interpretation">Shows the tension between continued QT and potential need for crisis liquidity provision</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Financial Conditions Tightening</div>
-                    <canvas id="chart_balance_sheet_policy_in_crisis_1" height="200"></canvas>
-                    <div class="chart-interpretation">Demonstrates how geopolitical stress affects broader financial conditions despite Fed policy</div>
-                </div>
-                    
-                <div class="views-grid">
-                    <div class="view-box consensus">
-                        <div class="view-label">🎯 Consensus View</div>
-                        <p>The Fed will continue gradual balance sheet reduction but may slow the pace if financial conditions tighten significantly, prioritizing market functioning over rapid normalization during geopolitical stress.</p>
-                    </div>
-                    <div class="view-box contrarian">
-                        <div class="view-label">⚡ Contrarian View</div>
-                        <p>Geopolitical shocks argue for pausing QT entirely and potentially expanding the balance sheet if financial stability risks emerge, similar to the 2019 repo market stress response.</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <section class="report-section">
-                <h2>👥 Labor Markets & Consumer Resilience</h2>
-                <div class="section-body">
-                    <div class="analysis-text">US labor market indicators continue to show resilience despite geopolitical turbulence, though some softening is evident in the most recent data. Initial jobless claims rose to 210,000 for the week ending March 21, up from 205,000 the previous week, still reflecting a healthy labor market but showing some uptick in layoffs. February payroll data showed an unexpected decline of 92,000 jobs to 158.466 million total nonfarm employment, though this followed a strong January gain. The unemployment rate ticked up to 4.4% in February from 4.3% in January, remaining near historical lows but showing gradual normalization from extremely tight conditions. Vice Chair Jefferson noted that unemployment 'is low and stable by historical standards, while hiring has slowed to a very modest pace,' suggesting the labor market is moving toward better balance without acute deterioration. JOLTS data for January showed job openings rebounding to 6.946 million from December's 6.55 million, indicating continued demand for workers despite some cooling. Consumer sentiment remains subdued at 56.6 in February, barely improved from January's 56.4, reflecting ongoing concerns about economic conditions and likely to face further pressure from energy price increases. The key question is whether labor market resilience can withstand the negative wealth effects and uncertainty from the geopolitical crisis. Retail sales excluding food services declined modestly in January to $633.7 billion from December's $634.7 billion, suggesting some consumer caution even before the Iran conflict. The combination of still-tight labor markets and energy price pressures creates a particularly challenging environment for wage-price dynamics.</div>
-                    <div class="data-chips">
-                <div class="data-chip">
-                    <span class="chip-label">Unemployment Rate</span>
-                    <span class="chip-value">4.4%</span>
-                    <span class="chip-change" style="color:#10b981">↑ +0.1pp in February</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Initial Jobless Claims</span>
-                    <span class="chip-value">210,000</span>
-                    <span class="chip-change" style="color:#10b981">↑ +5,000 from prior week</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">JOLTS Job Openings</span>
-                    <span class="chip-value">6.946 million</span>
-                    <span class="chip-change" style="color:#10b981">↑ +396K from December</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Consumer Sentiment</span>
-                    <span class="chip-value">56.6</span>
-                    <span class="chip-change" style="color:#10b981">↑ +0.2 from January</span>
-                </div></div>
-                    
-                <div class="chart-container">
-                    <div class="chart-title">Unemployment Rate: Gradual Normalization</div>
-                    <canvas id="chart_labor_markets_and_consumer_resilience_0" height="200"></canvas>
-                    <div class="chart-interpretation">Shows steady but modest increases from historically low levels</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Consumer Sentiment: Persistent Pessimism</div>
-                    <canvas id="chart_labor_markets_and_consumer_resilience_1" height="200"></canvas>
-                    <div class="chart-interpretation">Reflects ongoing concerns that will likely worsen with energy price shock</div>
-                </div>
-                    
-                <div class="views-grid">
-                    <div class="view-box consensus">
-                        <div class="view-label">🎯 Consensus View</div>
-                        <p>Labor markets will soften gradually as energy shocks and geopolitical uncertainty weigh on hiring, with unemployment rising to 4.7-5.0% by year-end but avoiding sharp deterioration.</p>
-                    </div>
-                    <div class="view-box contrarian">
-                        <div class="view-label">⚡ Contrarian View</div>
-                        <p>If energy prices remain elevated and consumer confidence collapses, labor demand could weaken rapidly, pushing unemployment above 5.5% and triggering more significant economic contraction than currently anticipated.</p>
+                        <p>Energy price increases could trigger more significant job losses than expected, particularly in energy-intensive industries. European economies face particular vulnerability given higher energy costs, potentially leading to sharper rises in unemployment and renewed political instability.</p>
                     </div>
                 </div>
                 </div>
@@ -620,9 +585,9 @@ body {
                     <td class="dash-change" style="color:#10b981">↑ +9 bps</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">High Yield Spread</td>
-                    <td class="dash-value">3.21%</td>
-                    <td class="dash-change" style="color:#10b981">↑ +4 bps</td>
+                    <td class="dash-label">10Y-2Y Spread</td>
+                    <td class="dash-value">0.56%</td>
+                    <td class="dash-change" style="color:#10b981">↑ +10 bps</td>
                 </tr>
                 </table>
             </div>
@@ -631,24 +596,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">Core CPI (YoY)</td>
-                    <td class="dash-value">2.6%</td>
-                    <td class="dash-change" style="color:#6b7280">→ February reading</td>
+                    <td class="dash-label">Core CPI (Feb)</td>
+                    <td class="dash-value">333.5</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.72% MoM</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">Core PCE (Jan)</td>
+                    <td class="dash-value">128.4</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.47% MoM</td>
                 </tr>
                 <tr>
                     <td class="dash-label">5Y Breakeven</td>
                     <td class="dash-value">2.56%</td>
-                    <td class="dash-change" style="color:#6b7280">→ Stable</td>
-                </tr>
-                <tr>
-                    <td class="dash-label">10Y Breakeven</td>
-                    <td class="dash-value">2.31%</td>
-                    <td class="dash-change" style="color:#ef4444">↓ -3 bps</td>
+                    <td class="dash-change" style="color:#6b7280">→ Unchanged</td>
                 </tr>
                 <tr>
                     <td class="dash-label">UMich Expectations</td>
                     <td class="dash-value">3.4%</td>
-                    <td class="dash-change" style="color:#ef4444">↓ -0.6pp</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -0.6% from Jan</td>
                 </tr>
                 </table>
             </div>
@@ -657,24 +622,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">Unemployment Rate</td>
+                    <td class="dash-label">Unemployment</td>
                     <td class="dash-value">4.4%</td>
-                    <td class="dash-change" style="color:#10b981">↑ +0.1pp</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.1%</td>
                 </tr>
                 <tr>
                     <td class="dash-label">Payrolls (Feb)</td>
-                    <td class="dash-value">-92K</td>
-                    <td class="dash-change" style="color:#ef4444">↓ Monthly change</td>
-                </tr>
-                <tr>
-                    <td class="dash-label">Job Openings</td>
-                    <td class="dash-value">6.946M</td>
-                    <td class="dash-change" style="color:#10b981">↑ +396K</td>
+                    <td class="dash-value">158,466K</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -92K</td>
                 </tr>
                 <tr>
                     <td class="dash-label">Initial Claims</td>
                     <td class="dash-value">210K</td>
                     <td class="dash-change" style="color:#10b981">↑ +5K</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">Job Openings</td>
+                    <td class="dash-value">6,946K</td>
+                    <td class="dash-change" style="color:#10b981">↑ +396K</td>
                 </tr>
                 </table>
             </div>
@@ -683,24 +648,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">Q4 GDP (Ann.)</td>
-                    <td class="dash-value">4.4%</td>
-                    <td class="dash-change" style="color:#10b981">↑ Strong finish to 2025</td>
-                </tr>
-                <tr>
                     <td class="dash-label">Industrial Production</td>
-                    <td class="dash-value">+0.15%</td>
-                    <td class="dash-change" style="color:#10b981">↑ February MoM</td>
+                    <td class="dash-value">102.55</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.15</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Retail Sales ex-Food</td>
-                    <td class="dash-value">-0.15%</td>
-                    <td class="dash-change" style="color:#ef4444">↓ January MoM</td>
+                    <td class="dash-label">Retail Sales ex Food</td>
+                    <td class="dash-value">$633.7B</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -$964M</td>
                 </tr>
                 <tr>
                     <td class="dash-label">Housing Starts</td>
-                    <td class="dash-value">1.487M</td>
+                    <td class="dash-value">1,487K</td>
                     <td class="dash-change" style="color:#10b981">↑ +100K</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">Consumer Sentiment</td>
+                    <td class="dash-value">56.6</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.2</td>
                 </tr>
                 </table>
             </div>
@@ -711,22 +676,22 @@ body {
                 <tr>
                     <td class="dash-label">VIX</td>
                     <td class="dash-value">27.44</td>
-                    <td class="dash-change" style="color:#10b981">↑ +2.1</td>
+                    <td class="dash-change" style="color:#10b981">↑ +2.11</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">NFCI</td>
-                    <td class="dash-value">-0.475</td>
-                    <td class="dash-change" style="color:#10b981">↑ Less accommodative</td>
+                    <td class="dash-label">HY Credit Spreads</td>
+                    <td class="dash-value">321 bps</td>
+                    <td class="dash-change" style="color:#10b981">↑ +4 bps</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">USD Index</td>
+                    <td class="dash-label">Chicago Fed NFCI</td>
+                    <td class="dash-value">-0.48</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.01</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">Dollar Index</td>
                     <td class="dash-value">120.28</td>
                     <td class="dash-change" style="color:#10b981">↑ +0.10</td>
-                </tr>
-                <tr>
-                    <td class="dash-label">Fed Balance Sheet</td>
-                    <td class="dash-value">$6.66T</td>
-                    <td class="dash-change" style="color:#10b981">↑ +$1.2B</td>
                 </tr>
                 </table>
             </div>
@@ -735,24 +700,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">WTI Crude</td>
-                    <td class="dash-value">$114/bbl</td>
-                    <td class="dash-change" style="color:#10b981">↑ +$25 since conflict</td>
+                    <td class="dash-label">WTI Crude Oil</td>
+                    <td class="dash-value">$89.33</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -$9.38</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Euro Area CPI (Feb)</td>
-                    <td class="dash-value">1.9%</td>
-                    <td class="dash-change" style="color:#ef4444">↓ Pre-conflict</td>
+                    <td class="dash-label">ECB Inflation Exp.</td>
+                    <td class="dash-value">2.5%</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -0.1%</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">ECB Wage Tracker</td>
-                    <td class="dash-value">2.3%</td>
-                    <td class="dash-change" style="color:#ef4444">↓ 2026 projection</td>
+                    <td class="dash-label">Fed Balance Sheet</td>
+                    <td class="dash-value">$6.66T</td>
+                    <td class="dash-change" style="color:#10b981">↑ +$1.2B</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Global Policy Uncertainty</td>
-                    <td class="dash-value">371</td>
-                    <td class="dash-change" style="color:#ef4444">↓ November reading</td>
+                    <td class="dash-label">M2 Money Supply</td>
+                    <td class="dash-value">$22.67T</td>
+                    <td class="dash-change" style="color:#10b981">↑ +$198B</td>
                 </tr>
                 </table>
             </div>
@@ -765,7 +730,7 @@ body {
             <div class="week-ahead-grid">
                 <div class="wa-panel">
                     <h3>Key Catalysts</h3>
-                    <ul class="catalyst-list"><li class="catalyst-item">📌 Iran conflict duration and resolution prospects</li><li class="catalyst-item">📌 Energy price trajectory and supply disruptions</li><li class="catalyst-item">📌 Central bank communications on stagflation risks</li><li class="catalyst-item">📌 Q1 earnings season kickoff with major banks</li></ul>
+                    <ul class="catalyst-list"><li class="catalyst-item">📌 Iran conflict developments and Strait of Hormuz status</li><li class="catalyst-item">📌 Q1 2026 earnings season begins with major banks</li><li class="catalyst-item">📌 OPEC+ emergency meeting speculation</li><li class="catalyst-item">📌 European energy supply assessments</li></ul>
                 </div>
                 <div class="wa-panel wide">
                     <h3>Data Calendar</h3>
@@ -777,39 +742,39 @@ body {
             <tr>
                 <td class="release-date">Tuesday, April 1</td>
                 <td class="release-name">ISM Manufacturing PMI</td>
-                <td class="release-prior">48.3</td>
-                <td class="release-consensus">48.8</td>
+                <td class="release-prior">48.4</td>
+                <td class="release-consensus">49.1</td>
             </tr>
             <tr>
                 <td class="release-date">Wednesday, April 2</td>
-                <td class="release-name">ADP Employment</td>
+                <td class="release-name">ADP Employment Report</td>
                 <td class="release-prior">140K</td>
-                <td class="release-consensus">160K</td>
+                <td class="release-consensus">180K</td>
             </tr>
             <tr>
                 <td class="release-date">Thursday, April 3</td>
-                <td class="release-name">Weekly Jobless Claims</td>
+                <td class="release-name">Initial Jobless Claims</td>
                 <td class="release-prior">210K</td>
-                <td class="release-consensus">212K</td>
+                <td class="release-consensus">208K</td>
             </tr>
             <tr>
                 <td class="release-date">Friday, April 4</td>
-                <td class="release-name">March Jobs Report</td>
+                <td class="release-name">Nonfarm Payrolls</td>
                 <td class="release-prior">-92K</td>
-                <td class="release-consensus">+180K</td>
+                <td class="release-consensus">+185K</td>
             </tr></tbody>
                     </table>
                 </div>
                 <div class="wa-panel">
                     <h3>Risks to Watch</h3>
-                    <ul class="risk-list"><li class="risk-item">⚠️ Escalation of Iran conflict beyond current 2-4 week timeline</li><li class="risk-item">⚠️ Energy price spike to $120+ triggering demand destruction</li><li class="risk-item">⚠️ Financial stability risks if oil shock persists</li><li class="risk-item">⚠️ Unanchoring of inflation expectations above 3%</li></ul>
+                    <ul class="risk-list"><li class="risk-item">⚠️ Escalation of Iran conflict closing Strait of Hormuz permanently</li><li class="risk-item">⚠️ European energy rationing announcements</li><li class="risk-item">⚠️ Credit market stress from energy sector defaults</li><li class="risk-item">⚠️ Central bank emergency policy responses</li></ul>
                 </div>
             </div>
         </section>
 
     <div class="bottom-line">
         <h2>🎯 The Bottom Line</h2>
-        <p>The Iran conflict has fundamentally altered the macro landscape, forcing central banks to navigate between supporting growth and preventing energy-driven inflation from becoming embedded. While labor markets remain resilient and wage pressures are moderating, the $114 oil price represents a significant stagflationary threat that could persist for weeks. The Fed's cautious stance reflects this new reality - policy normalization must now account for geopolitical risk premiums that can rapidly shift the inflation-growth trade-off.</p>
+        <p>The Iran conflict has fundamentally altered the macro landscape, forcing central banks to navigate classic stagflationary pressures just as they were gaining confidence in the disinflationary trend. With energy prices volatile and financial conditions tightening rapidly, the policy toolkit faces severe constraints. The key variable to watch is oil price persistence - if crude remains above $100 for months rather than weeks, both the Fed and ECB will face impossible choices between fighting inflation and preventing recession.</p>
     </div>
 
     <footer class="report-footer">
@@ -823,7 +788,7 @@ body {
 document.addEventListener('DOMContentLoaded', function() {
     
     (function() {
-        const ctx = document.getElementById('chart_monetary_policy_under_geopolitical_stress_0');
+        const ctx = document.getElementById('chart_central_bank_policy_under_geopolitical_stress_0');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
@@ -884,15 +849,15 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_monetary_policy_under_geopolitical_stress_1');
+        const ctx = document.getElementById('chart_central_bank_policy_under_geopolitical_stress_1');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27"],
+                labels: ["2025-12-30", "2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
                 datasets: [{
-                    label: '10Y-2Y Spread (Yield Curve)',
-                    data: [0.71, 0.72, 0.71, 0.71, 0.68, 0.7, 0.64, 0.65, 0.65, 0.64, 0.61, 0.65, 0.7, 0.66, 0.65, 0.64, 0.66, 0.71, 0.7, 0.71, 0.74, 0.72, 0.71, 0.72, 0.74, 0.72, 0.74, 0.71, 0.66, 0.62, 0.64, 0.62, 0.62, 0.61, 0.6, 0.6, 0.61, 0.6, 0.6, 0.59, 0.58, 0.55, 0.55, 0.56, 0.59, 0.56, 0.58, 0.57, 0.51, 0.55, 0.55, 0.52, 0.5, 0.46, 0.51, 0.51, 0.49, 0.49, 0.46, 0.56],
+                    label: '10-Year Treasury Yield',
+                    data: [4.14, 4.18, 4.19, 4.17, 4.18, 4.15, 4.19, 4.18, 4.19, 4.18, 4.15, 4.17, 4.24, 4.3, 4.26, 4.26, 4.24, 4.22, 4.24, 4.26, 4.24, 4.26, 4.29, 4.28, 4.29, 4.21, 4.22, 4.22, 4.16, 4.18, 4.09, 4.04, 4.05, 4.09, 4.08, 4.08, 4.03, 4.04, 4.05, 4.02, 3.97, 4.05, 4.06, 4.09, 4.13, 4.15, 4.12, 4.15, 4.21, 4.27, 4.28, 4.23, 4.2, 4.26, 4.25, 4.39, 4.34, 4.39, 4.33, 4.42],
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.08)',
                     borderWidth: 2,
@@ -945,7 +910,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_energy_shock_and_stagflation_risks_0');
+        const ctx = document.getElementById('chart_energy_markets_and_stagflationary_pressures_0');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
@@ -1006,7 +971,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_energy_shock_and_stagflation_risks_1');
+        const ctx = document.getElementById('chart_energy_markets_and_stagflationary_pressures_1');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
@@ -1067,15 +1032,15 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_european_monetary_policy_divergence_0');
+        const ctx = document.getElementById('chart_financial_market_stress_and_portfolio_disruption_0');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01"],
+                labels: ["2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
                 datasets: [{
-                    label: 'Global Economic Policy Uncertainty',
-                    data: [468.84279693223056, 623.3520453984211, 511.6903036177236, 368.5934566761253, 406.88756978050156, 343.339059719265, 308.47823098184006, 404.8730524836602, 371.09535172579444],
+                    label: 'VIX (Volatility Index)',
+                    data: [14.51, 14.9, 14.75, 15.38, 15.45, 14.49, 15.12, 15.98, 16.75, 15.84, 15.86, 18.84, 20.09, 16.9, 15.64, 16.09, 16.15, 16.35, 16.35, 16.88, 17.44, 16.34, 18.0, 18.64, 21.77, 17.76, 17.36, 17.79, 17.65, 20.82, 20.6, 21.2, 20.29, 19.62, 20.23, 19.09, 21.01, 19.55, 17.93, 18.63, 19.86, 21.44, 23.57, 21.15, 23.75, 29.49, 25.5, 24.93, 24.23, 27.29, 27.19, 23.51, 22.37, 25.09, 24.06, 26.78, 26.15, 26.95, 25.33, 27.44],
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.08)',
                     borderWidth: 2,
@@ -1128,15 +1093,15 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_balance_sheet_policy_in_crisis_0');
+        const ctx = document.getElementById('chart_financial_market_stress_and_portfolio_disruption_1');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["2025-04-02", "2025-04-09", "2025-04-16", "2025-04-23", "2025-04-30", "2025-05-07", "2025-05-14", "2025-05-21", "2025-05-28", "2025-06-04", "2025-06-11", "2025-06-18", "2025-06-25", "2025-07-02", "2025-07-09", "2025-07-16", "2025-07-23", "2025-07-30", "2025-08-06", "2025-08-13", "2025-08-20", "2025-08-27", "2025-09-03", "2025-09-10", "2025-09-17", "2025-09-24", "2025-10-01", "2025-10-08", "2025-10-15", "2025-10-22", "2025-10-29", "2025-11-05", "2025-11-12", "2025-11-19", "2025-11-26", "2025-12-03", "2025-12-10", "2025-12-17", "2025-12-24", "2025-12-31", "2026-01-07", "2026-01-14", "2026-01-21", "2026-01-28", "2026-02-04", "2026-02-11", "2026-02-18", "2026-02-25", "2026-03-04", "2026-03-11", "2026-03-18", "2026-03-25"],
+                labels: ["2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27"],
                 datasets: [{
-                    label: 'Fed Balance Sheet (Total Assets)',
-                    data: [6723452.0, 6727416.0, 6727113.0, 6726930.0, 6709277.0, 6710889.0, 6713270.0, 6688726.0, 6673244.0, 6672885.0, 6677155.0, 6681056.0, 6662200.0, 6659598.0, 6661912.0, 6659273.0, 6657715.0, 6642578.0, 6640843.0, 6643615.0, 6618415.0, 6603384.0, 6602071.0, 6605962.0, 6608597.0, 6608395.0, 6587119.0, 6590815.0, 6596454.0, 6589533.0, 6587034.0, 6572732.0, 6580462.0, 6555283.0, 6552419.0, 6535781.0, 6539303.0, 6556861.0, 6581231.0, 6640618.0, 6573602.0, 6581700.0, 6584580.0, 6587568.0, 6605909.0, 6622382.0, 6613395.0, 6613797.0, 6628894.0, 6646344.0, 6655939.0, 6657161.0],
+                    label: '10Y-2Y Spread (Yield Curve)',
+                    data: [0.71, 0.72, 0.71, 0.71, 0.68, 0.7, 0.64, 0.65, 0.65, 0.64, 0.61, 0.65, 0.7, 0.66, 0.65, 0.64, 0.66, 0.71, 0.7, 0.71, 0.74, 0.72, 0.71, 0.72, 0.74, 0.72, 0.74, 0.71, 0.66, 0.62, 0.64, 0.62, 0.62, 0.61, 0.6, 0.6, 0.61, 0.6, 0.6, 0.59, 0.58, 0.55, 0.55, 0.56, 0.59, 0.56, 0.58, 0.57, 0.51, 0.55, 0.55, 0.52, 0.5, 0.46, 0.51, 0.51, 0.49, 0.49, 0.46, 0.56],
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.08)',
                     borderWidth: 2,
@@ -1178,7 +1143,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         title: {
                             display: true,
-                            text: 'Millions of U.S. Dollars',
+                            text: 'Percent',
                             color: '#94a3b8',
                             font: { size: 10 },
                         }
@@ -1189,68 +1154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_balance_sheet_policy_in_crisis_1');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-03-28", "2025-04-04", "2025-04-11", "2025-04-18", "2025-04-25", "2025-05-02", "2025-05-09", "2025-05-16", "2025-05-23", "2025-05-30", "2025-06-06", "2025-06-13", "2025-06-20", "2025-06-27", "2025-07-04", "2025-07-11", "2025-07-18", "2025-07-25", "2025-08-01", "2025-08-08", "2025-08-15", "2025-08-22", "2025-08-29", "2025-09-05", "2025-09-12", "2025-09-19", "2025-09-26", "2025-10-03", "2025-10-10", "2025-10-17", "2025-10-24", "2025-10-31", "2025-11-07", "2025-11-14", "2025-11-21", "2025-11-28", "2025-12-05", "2025-12-12", "2025-12-19", "2025-12-26", "2026-01-02", "2026-01-09", "2026-01-16", "2026-01-23", "2026-01-30", "2026-02-06", "2026-02-13", "2026-02-20", "2026-02-27", "2026-03-06", "2026-03-13", "2026-03-20"],
-                datasets: [{
-                    label: 'Chicago Fed National Financial Conditions',
-                    data: [-0.41199, -0.39697, -0.38619, -0.3866, -0.39309, -0.40638, -0.42359, -0.44104, -0.45569, -0.46757, -0.47675, -0.48425, -0.4907, -0.49741, -0.50439, -0.51092, -0.51597, -0.5202, -0.52305, -0.52482, -0.52732, -0.52843, -0.5293, -0.52935, -0.52947, -0.52821, -0.52719, -0.5258, -0.52355, -0.51975, -0.51639, -0.51263, -0.50928, -0.50749, -0.50702, -0.50887, -0.51232, -0.51749, -0.52564, -0.53631, -0.54632, -0.55542, -0.56035, -0.56115, -0.558, -0.55183, -0.54248, -0.53066, -0.5174, -0.503, -0.48796, -0.47504],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Index',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_labor_markets_and_consumer_resilience_0');
+        const ctx = document.getElementById('chart_labor_market_resilience_amid_uncertainty_0');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
@@ -1311,15 +1215,15 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_labor_markets_and_consumer_resilience_1');
+        const ctx = document.getElementById('chart_labor_market_resilience_amid_uncertainty_1');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01"],
+                labels: ["2025-03-29", "2025-04-05", "2025-04-12", "2025-04-19", "2025-04-26", "2025-05-03", "2025-05-10", "2025-05-17", "2025-05-24", "2025-05-31", "2025-06-07", "2025-06-14", "2025-06-21", "2025-06-28", "2025-07-05", "2025-07-12", "2025-07-19", "2025-07-26", "2025-08-02", "2025-08-09", "2025-08-16", "2025-08-23", "2025-08-30", "2025-09-06", "2025-09-13", "2025-09-20", "2025-09-27", "2025-10-04", "2025-10-11", "2025-10-18", "2025-10-25", "2025-11-01", "2025-11-08", "2025-11-15", "2025-11-22", "2025-11-29", "2025-12-06", "2025-12-13", "2025-12-20", "2025-12-27", "2026-01-03", "2026-01-10", "2026-01-17", "2026-01-24", "2026-01-31", "2026-02-07", "2026-02-14", "2026-02-21", "2026-02-28", "2026-03-07", "2026-03-14", "2026-03-21"],
                 datasets: [{
-                    label: 'Consumer Sentiment (UMich)',
-                    data: [57.0, 52.2, 52.2, 60.7, 61.7, 58.2, 55.1, 53.6, 51.0, 52.9, 56.4, 56.6],
+                    label: 'Initial Jobless Claims',
+                    data: [220000.0, 223000.0, 217000.0, 224000.0, 239000.0, 228000.0, 226000.0, 225000.0, 236000.0, 244000.0, 246000.0, 243000.0, 236000.0, 231000.0, 228000.0, 221000.0, 218000.0, 219000.0, 226000.0, 224000.0, 233000.0, 229000.0, 236000.0, 259000.0, 233000.0, 219000.0, 225000.0, 233000.0, 222000.0, 231000.0, 221000.0, 228000.0, 228000.0, 222000.0, 218000.0, 216000.0, 235000.0, 224000.0, 215000.0, 203000.0, 207000.0, 201000.0, 210000.0, 211000.0, 230000.0, 230000.0, 208000.0, 211000.0, 214000.0, 213000.0, 205000.0, 210000.0],
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.08)',
                     borderWidth: 2,
@@ -1361,7 +1265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         title: {
                             display: true,
-                            text: 'Index 1966:Q1=100',
+                            text: 'Number',
                             color: '#94a3b8',
                             font: { size: 10 },
                         }
