@@ -1,0 +1,51 @@
+name: Weekly Market Economist Brief
+
+on:
+  schedule:
+    # Every Monday at 7:00 AM ET (11:00 UTC)
+    # Adjust for daylight saving: EDT = UTC-4, EST = UTC-5
+    - cron: '0 11 * * 1'
+
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+env:
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+  TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+  REPORT_EMAIL_TO: ${{ secrets.REPORT_EMAIL_TO }}
+  REPORT_EMAIL_FROM: ${{ secrets.REPORT_EMAIL_FROM }}
+  # Optional fallback SMTP
+  SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+  SMTP_HOST: ${{ secrets.SMTP_HOST }}
+  SMTP_PORT: ${{ secrets.SMTP_PORT }}
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run research agent
+        working-directory: src
+        run: python agent.py
+
+      - name: Archive report
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-brief-${{ github.run_id }}
+          path: src/output/*.html
+          retention-days: 90
