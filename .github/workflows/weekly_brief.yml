@@ -2,9 +2,9 @@ name: Weekly Market Economist Brief
 
 on:
   schedule:
-    # Every Monday at 7:00 AM ET (11:00 UTC)
+    # Every Saturday at 7:00 AM ET (11:00 UTC)
     # Adjust for daylight saving: EDT = UTC-4, EST = UTC-5
-    - cron: '0 11 * * 1'
+    - cron: '0 11 * * 6'
 
   # Allow manual trigger for testing
   workflow_dispatch:

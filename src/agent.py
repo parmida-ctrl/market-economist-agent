@@ -19,6 +19,8 @@ from pathlib import Path
 from sources import RSSCollector, WebSearchCollector, FREDDataCollector
 from synthesizer import ReportSynthesizer
 from report_builder import ReportBuilder
+from email_report_builder import EmailReportBuilder
+from charts import render_fred_charts
 from emailer import ReportEmailer
 
 logging.basicConfig(
@@ -178,22 +180,39 @@ def run_pipeline():
     # ------------------------------------------------------------------
     # 3  BUILD REPORT
     # ------------------------------------------------------------------
-    logger.info("Phase 3: Building HTML report with charts...")
+    logger.info("Phase 3: Rendering charts and building reports...")
 
-    builder = ReportBuilder()
-    html_report = builder.build(
+    # Render charts as static PNGs (Gmail can't run JavaScript)
+    charts = render_fred_charts(
+        sections=report_content.get("sections", []),
+        fred_data=fred_data,
+    )
+    logger.info(f"  Rendered {len(charts)} charts as PNG images")
+
+    # Build Gmail-compatible email (inline styles, embedded chart images)
+    email_builder = EmailReportBuilder()
+    email_html = email_builder.build(
+        content=report_content,
+        charts=charts,
+        report_date=report_date,
+        week_label=week_label,
+    )
+
+    # Also build the interactive browser version (Chart.js, dark theme)
+    browser_builder = ReportBuilder()
+    browser_html = browser_builder.build(
         content=report_content,
         fred_data=fred_data,
         report_date=report_date,
         week_label=week_label,
     )
 
-    # Save a local copy
+    # Save both versions
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
-    out_path = output_dir / f"market_brief_{today.isoformat()}.html"
-    out_path.write_text(html_report, encoding="utf-8")
-    logger.info(f"  Report saved → {out_path}")
+    (output_dir / f"market_brief_{today.isoformat()}_email.html").write_text(email_html, encoding="utf-8")
+    (output_dir / f"market_brief_{today.isoformat()}_browser.html").write_text(browser_html, encoding="utf-8")
+    logger.info(f"  Reports saved → {output_dir}")
 
     # ------------------------------------------------------------------
     # 4  EMAIL
@@ -203,7 +222,7 @@ def run_pipeline():
     emailer = ReportEmailer()
     emailer.send(
         subject=f"📊 Weekly Market Economist Brief — {week_label}",
-        html_body=html_report,
+        html_body=email_html,
     )
 
     logger.info("=== Pipeline complete ===")
