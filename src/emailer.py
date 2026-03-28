@@ -1,43 +1,47 @@
 """
 Email delivery for the Market Economist Agent.
-Supports SendGrid (recommended) or SMTP (Gmail fallback).
+Sends a clean text/HTML summary in the email body,
+and attaches the full interactive report as an HTML file.
 """
 
 import os
 import logging
 import smtplib
+import base64
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 
 logger = logging.getLogger("agent.emailer")
 
 
 class ReportEmailer:
-    """Sends the HTML report via email."""
-
     def __init__(self):
         self.to_email = os.environ.get("REPORT_EMAIL_TO", "")
         self.from_email = os.environ.get("REPORT_EMAIL_FROM", "")
         self.sendgrid_key = os.environ.get("SENDGRID_API_KEY", "")
         self.smtp_password = os.environ.get("SMTP_PASSWORD", "")
 
-    def send(self, subject: str, html_body: str):
+    def send(self, subject, html_body, attachment_html=None, attachment_name="market_brief.html"):
         if not self.to_email:
-            logger.error("REPORT_EMAIL_TO not configured — skipping email")
+            logger.error("REPORT_EMAIL_TO not configured")
             return
 
         if self.sendgrid_key:
-            self._send_sendgrid(subject, html_body)
+            self._send_sendgrid(subject, html_body, attachment_html, attachment_name)
         elif self.smtp_password:
-            self._send_smtp(subject, html_body)
+            self._send_smtp(subject, html_body, attachment_html, attachment_name)
         else:
-            logger.error("No email credentials configured (need SENDGRID_API_KEY or SMTP_PASSWORD)")
+            logger.error("No email credentials configured")
 
-    def _send_sendgrid(self, subject: str, html_body: str):
-        """Send via SendGrid API."""
+    def _send_sendgrid(self, subject, html_body, attachment_html, attachment_name):
         try:
             import sendgrid
-            from sendgrid.helpers.mail import Mail, Email, To, Content
+            from sendgrid.helpers.mail import (
+                Mail, Email, To, Content, Attachment,
+                FileContent, FileName, FileType, Disposition,
+            )
 
             sg = sendgrid.SendGridAPIClient(api_key=self.sendgrid_key)
             message = Mail(
@@ -46,33 +50,42 @@ class ReportEmailer:
                 subject=subject,
                 html_content=Content("text/html", html_body),
             )
+
+            if attachment_html:
+                encoded = base64.b64encode(attachment_html.encode("utf-8")).decode("utf-8")
+                attachment = Attachment(
+                    FileContent(encoded),
+                    FileName(attachment_name),
+                    FileType("text/html"),
+                    Disposition("attachment"),
+                )
+                message.attachment = attachment
+
             response = sg.client.mail.send.post(request_body=message.get())
             logger.info(f"SendGrid response: {response.status_code}")
         except Exception as e:
             logger.error(f"SendGrid send failed: {e}")
-            # Fallback to SMTP if available
             if self.smtp_password:
-                logger.info("Falling back to SMTP...")
-                self._send_smtp(subject, html_body)
+                self._send_smtp(subject, html_body, attachment_html, attachment_name)
 
-    def _send_smtp(self, subject: str, html_body: str):
-        """Send via Gmail SMTP (requires app password)."""
+    def _send_smtp(self, subject, html_body, attachment_html, attachment_name):
         try:
-            msg = MIMEMultipart("alternative")
+            msg = MIMEMultipart("mixed")
             msg["Subject"] = subject
             msg["From"] = self.from_email
             msg["To"] = self.to_email
 
-            # Plain text fallback
-            text_part = MIMEText(
-                "Your weekly market economist brief is attached as HTML. "
-                "Please view this email in an HTML-capable client.",
-                "plain",
-            )
-            html_part = MIMEText(html_body, "html")
+            body_part = MIMEMultipart("alternative")
+            body_part.attach(MIMEText("Your weekly market brief is ready. Open the attached HTML file for the full report with charts.", "plain"))
+            body_part.attach(MIMEText(html_body, "html"))
+            msg.attach(body_part)
 
-            msg.attach(text_part)
-            msg.attach(html_part)
+            if attachment_html:
+                att = MIMEBase("text", "html")
+                att.set_payload(attachment_html.encode("utf-8"))
+                encoders.encode_base64(att)
+                att.add_header("Content-Disposition", f"attachment; filename={attachment_name}")
+                msg.attach(att)
 
             smtp_host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
             smtp_port = int(os.environ.get("SMTP_PORT", "587"))

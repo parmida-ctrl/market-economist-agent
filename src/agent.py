@@ -1,13 +1,5 @@
 """
 Financial Market Economist Research Agent
-=========================================
-A weekly research pipeline that:
-1. Pulls RSS feeds from curated financial sources
-2. Searches for breaking/trending market topics
-3. Fetches FRED economic data series
-4. Synthesizes findings via Claude API
-5. Generates an HTML report with charts
-6. Emails the report
 """
 
 import os
@@ -43,7 +35,6 @@ RSS_FEEDS = {
     "Census Economic Indicators": "https://www.census.gov/economic-indicators/indicator.xml",
     "Reuters Business":         "https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best",
     "FT Markets":               "https://www.ft.com/markets?format=rss",
-    "WSJ Markets":              "https://feeds.a]wsj.com/wsj/xml/rss/3_7031.xml",
     "Bloomberg Markets":        "https://feeds.bloomberg.com/markets/news.rss",
     "CNBC Economy":             "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258",
     "Brookings Economics":      "https://www.brookings.edu/topic/economy/feed/",
@@ -116,7 +107,7 @@ def run_pipeline():
     logger.info(f"=== Starting Financial Market Economist Agent — {report_date} ===")
 
     # 1 COLLECT
-    logger.info("Phase 1: Collecting data from all sources...")
+    logger.info("Phase 1: Collecting data...")
     rss = RSSCollector(feeds=RSS_FEEDS, lookback_days=7)
     rss_articles = rss.collect()
     logger.info(f"  RSS: {len(rss_articles)} articles")
@@ -130,7 +121,7 @@ def run_pipeline():
     logger.info(f"  FRED: {len(fred_data)} data series")
 
     # 2 SYNTHESIZE
-    logger.info("Phase 2: Synthesizing research via Claude...")
+    logger.info("Phase 2: Synthesizing via Claude...")
     synthesizer = ReportSynthesizer()
     report_content = synthesizer.synthesize(
         rss_articles=rss_articles,
@@ -140,33 +131,12 @@ def run_pipeline():
     )
     logger.info("  Synthesis complete.")
 
-    # 3 BUILD REPORT
-    logger.info("Phase 3: Rendering charts and building reports...")
+    # 3 BUILD REPORTS
+    logger.info("Phase 3: Building reports...")
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
-    charts_dir = output_dir / "charts"
-    charts_dir.mkdir(exist_ok=True)
 
-    charts = render_fred_charts(
-        sections=report_content.get("sections", []),
-        fred_data=fred_data,
-        output_dir=str(charts_dir),
-    )
-    logger.info(f"  Rendered {len(charts)} charts as PNG images")
-
-    github_repo = os.environ.get("GITHUB_REPO", "parmida-ctrl/market-economist-agent")
-    owner = github_repo.split("/")[0]
-    repo_name = github_repo.split("/")[1] if "/" in github_repo else github_repo
-    chart_base_url = f"https://{owner}.github.io/{repo_name}/charts"
-
-    email_builder = EmailReportBuilder(chart_base_url=chart_base_url)
-    email_html = email_builder.build(
-        content=report_content,
-        charts=charts,
-        report_date=report_date,
-        week_label=week_label,
-    )
-
+    # Build the full interactive browser report (Chart.js, dark theme)
     browser_builder = ReportBuilder()
     browser_html = browser_builder.build(
         content=report_content,
@@ -175,16 +145,27 @@ def run_pipeline():
         week_label=week_label,
     )
 
-    (output_dir / f"market_brief_{today.isoformat()}_email.html").write_text(email_html, encoding="utf-8")
-    (output_dir / f"market_brief_{today.isoformat()}_browser.html").write_text(browser_html, encoding="utf-8")
-    logger.info(f"  Reports saved")
+    # Build the simple Gmail-friendly email body
+    email_builder = EmailReportBuilder()
+    email_html = email_builder.build(
+        content=report_content,
+        charts={},
+        report_date=report_date,
+        week_label=week_label,
+    )
 
-    # 4 EMAIL
+    (output_dir / f"market_brief_{today.isoformat()}_browser.html").write_text(browser_html, encoding="utf-8")
+    (output_dir / f"market_brief_{today.isoformat()}_email.html").write_text(email_html, encoding="utf-8")
+    logger.info("  Reports saved")
+
+    # 4 EMAIL (simple body + full report attached)
     logger.info("Phase 4: Emailing report...")
     emailer = ReportEmailer()
     emailer.send(
         subject=f"Weekly Market Economist Brief — {week_label}",
         html_body=email_html,
+        attachment_html=browser_html,
+        attachment_name=f"market_brief_{today.isoformat()}.html",
     )
 
     logger.info("=== Pipeline complete ===")
