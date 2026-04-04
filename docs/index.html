@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Market Economist Brief — Week of March 28, 2026</title>
+<title>Market Economist Brief — Week of April 04, 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -350,281 +350,211 @@ body {
 
     <header class="report-header">
         <div class="overline">Weekly Market Economist Brief</div>
-        <h1>Week of March 28, 2026</h1>
-        <div class="date">Published March 28, 2026 · Automated Research Agent</div>
+        <h1>Week of April 04, 2026</h1>
+        <div class="date">Published April 04, 2026 · Automated Research Agent</div>
     </header>
 
     <div class="exec-summary">
         <h2>Executive Summary</h2>
-        <p>The week of March 23-28, 2026 was dominated by a dramatic escalation in Middle East tensions as the Iran war entered its fourth week, fundamentally reshaping the global economic landscape. Oil prices surged to $114 per barrel—levels not seen since 2022—while global equity markets tumbled in tandem with bonds, eliminating traditional portfolio diversification benefits. The energy shock is forcing central banks worldwide to reconsider their policy paths, with markets now pricing in potential rate hikes from the ECB and Bank of England by April, even as growth concerns mount. Federal Reserve officials maintained their hawkish stance this week, with multiple speakers emphasizing the need to combat potential second-round inflationary effects from energy prices. The crisis has exposed the vulnerability of global supply chains, particularly affecting Europe's energy imports and Asian aviation fuel markets. What began as a regional conflict has now evolved into a systemic economic shock that threatens to derail the synchronized global recovery and force policymakers into the uncomfortable position of fighting both inflation and recession risks simultaneously.</p>
+        <p>The week ending April 4, 2026, was dominated by a stronger-than-expected March employment report that fundamentally altered the Federal Reserve's policy calculus amid ongoing Middle East conflict. Nonfarm payrolls surged 178,000, nearly triple consensus expectations of 59,000, while unemployment fell to 4.3% despite labor force contraction. This resilience in hiring, concentrated heavily in healthcare (+76,000) and construction (+26,000), comes as energy prices continue their relentless climb—WTI crude now above $104/barrel—due to the prolonged closure of the Strait of Hormuz. The juxtaposition of labor market strength against supply-side inflationary pressures has traders abandoning rate cut bets entirely, with markets now pricing virtually no Fed easing for 2026. Treasury yields retreated modestly on supply shock concerns, but the 10-year remains elevated at 4.31%, while breakeven inflation expectations continue grinding higher. Central banks globally are grappling with similar stagflationary dynamics, as evidenced by the Bank of England's Financial Policy Committee highlighting vulnerabilities in sovereign debt and private credit markets that could amplify under current stressed conditions.</p>
     </div>
 
     
             <section class="report-section">
-                <h2>⚡ Energy Crisis & Geopolitical Shock</h2>
+                <h2>💼 Labor Markets & Fed Policy Recalibration</h2>
                 <div class="section-body">
-                    <div class="analysis-text">The Iran war has fundamentally altered the global energy landscape, with WTI crude oil surging from $83.71 on March 10 to peaks above $114 this week—a 36% increase in just over two weeks. The closure of the Strait of Hormuz has created severe supply bottlenecks, particularly affecting refined products where stockpiles are considerably smaller than crude inventories. European diesel stockpiles are projected to be exhausted by mid-May if the strait remains closed, creating acute shortages for industrial production and transportation. The energy shock extends beyond oil to LPG and aviation fuels, with Asian air travel facing severe disruptions as jet fuel prices spike. UK traders warn that commercial diesel inventories could face critical shortages, potentially forcing industrial rationing. The spillover effects are cascading through global trade routes, with shipping costs rising sharply and supply chain disruptions reminiscent of the 2021-2022 period. This energy crisis differs from previous shocks in its breadth—affecting not just crude oil but the entire refined products complex, creating more persistent inflationary pressures across the economy.</div>
+                    <div class="analysis-text">March's employment report delivered a decisive blow to dovish Fed expectations, with the 178,000 payroll gain representing the strongest hiring in nearly a year and far exceeding the anemic 59,000 consensus. This marked a dramatic reversal from February's revised -133,000 decline, though much of the strength was concentrated in healthcare (+76,000), with 35,000 jobs returning from the resolved Kaiser Permanente strike. Construction added 26,000 positions despite elevated borrowing costs, while transportation and warehousing contributed 21,000. The unemployment rate's decline to 4.3% was less encouraging, driven primarily by a sharp 469,000 reduction in the labor force rather than robust job creation. The three-month average payroll gain now sits at just 68,000, still reflecting the broader deceleration in hiring that has characterized the labor market since mid-2025. Initial jobless claims have remained elevated around 200,000-215,000, consistent with a cooling but not collapsing employment environment. Job openings data through February showed a further decline to 6.88 million from 7.24 million in January, maintaining the gradual normalization in labor demand. This employment resilience comes at a critical juncture as energy-driven inflation pressures mount, creating the exact stagflationary conditions that make Fed policy most challenging.</div>
+                    <div class="data-chips">
+                <div class="data-chip">
+                    <span class="chip-label">March Nonfarm Payrolls</span>
+                    <span class="chip-value">178,000</span>
+                    <span class="chip-change" style="color:#10b981">↑ +311,000 vs February</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Unemployment Rate</span>
+                    <span class="chip-value">4.3%</span>
+                    <span class="chip-change" style="color:#ef4444">↓ -0.1pp from February</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Labor Force Participation</span>
+                    <span class="chip-value">Declined</span>
+                    <span class="chip-change" style="color:#ef4444">↓ -469,000 persons</span>
+                </div>
+                <div class="data-chip">
+                    <span class="chip-label">Initial Claims (4-week avg)</span>
+                    <span class="chip-value">207,750</span>
+                    <span class="chip-change" style="color:#10b981">↑ Elevated vs 2025 average</span>
+                </div></div>
+                    
+                <div class="chart-container">
+                    <div class="chart-title">Nonfarm Payrolls: Recovery Stalling</div>
+                    <canvas id="chart_labor_markets_and_fed_policy_recalibration_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows the dramatic slowdown in job creation since April 2025, with March representing first meaningful uptick</div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Unemployment Rate vs Labor Force</div>
+                    <canvas id="chart_labor_markets_and_fed_policy_recalibration_1" height="140"></canvas>
+                    <div class="chart-interpretation">Declining unemployment amid shrinking labor force suggests underlying weakness rather than strength</div>
+                </div>
+                    
+                <div class="views-grid">
+                    <div class="view-box consensus">
+                        <div class="view-label">🎯 Consensus View</div>
+                        <p>The strong March jobs report validates the Fed's patient approach and supports keeping rates on hold through 2026. Healthcare-driven hiring reflects structural labor shortages rather than cyclical strength, while underlying labor market indicators suggest continued gradual cooling that should eventually reduce wage pressures without triggering recession.</p>
+                    </div>
+                    <div class="view-box contrarian">
+                        <div class="view-label">⚡ Contrarian View</div>
+                        <p>The labor force contraction masking unemployment decline, combined with strike-related job recovery, suggests underlying weakness that could accelerate rapidly if energy prices continue damaging real incomes. Fed may need to cut sooner than expected if consumer spending collapses under dual pressure of high rates and energy costs.</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="report-section">
+                <h2>⛽ Energy Crisis & Inflation Dynamics</h2>
+                <div class="section-body">
+                    <div class="analysis-text">The Middle East conflict has now entered its fifth week with the Strait of Hormuz remaining effectively closed to commercial shipping, driving WTI crude prices above $104/barrel—a 49% surge for March alone and on track for the largest monthly gain on record. Brent crude has risen even more dramatically, up 55% month-to-date. This energy shock is propagating rapidly through the broader economy, with companies from shipping to retail already announcing price increases and surcharges. The U.S. Postal Service has proposed an 8% fuel surcharge on packages, while Chinese manufacturers are reporting 5-20% price increases on petrochemical-intensive products. Breakeven inflation expectations have responded predictably, with 5-year breakevens rising to 2.61% from 2.51% just two weeks ago, and 10-year breakevens climbing to 2.36%. Core PCE, the Fed's preferred measure, showed concerning acceleration to 0.37% monthly in January (annualized 4.4%), well above the Fed's 2% target. University of Michigan inflation expectations have shown volatility, declining to 3.4% in February from 4.0% in January, but surveys likely predate the most severe energy price increases. The key question is whether this represents a transitory supply shock or marks the beginning of a more persistent inflationary spiral, particularly given tight labor markets and elevated services inflation that preceded the energy crisis.</div>
                     <div class="data-chips">
                 <div class="data-chip">
                     <span class="chip-label">WTI Crude Oil</span>
-                    <span class="chip-value">$89.33</span>
-                    <span class="chip-change" style="color:#ef4444">↓ Down $9.38 from $98.71 peak</span>
+                    <span class="chip-value">$104.69/bbl</span>
+                    <span class="chip-change" style="color:#10b981">↑ +49% in March</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">Oil Price Peak (Week)</span>
-                    <span class="chip-value">$114/barrel</span>
-                    <span class="chip-change" style="color:#10b981">↑ Highest since 2022</span>
+                    <span class="chip-label">5-Year Breakeven Inflation</span>
+                    <span class="chip-value">2.61%</span>
+                    <span class="chip-change" style="color:#10b981">↑ +10bp this week</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">Energy Price Volatility</span>
-                    <span class="chip-value">36% surge</span>
-                    <span class="chip-change" style="color:#10b981">↑ March 10-27 period</span>
+                    <span class="chip-label">Core PCE (Jan)</span>
+                    <span class="chip-value">4.4% annualized</span>
+                    <span class="chip-change" style="color:#10b981">↑ Well above 2% target</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">VIX Volatility Index</span>
-                    <span class="chip-value">27.44</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up from 22.37 on March 17</span>
+                    <span class="chip-label">Michigan Expectations</span>
+                    <span class="chip-value">3.4%</span>
+                    <span class="chip-change" style="color:#ef4444">↓ -0.6pp from January</span>
                 </div></div>
                     
                 <div class="chart-container">
-                    <div class="chart-title">WTI Crude Oil Price Surge</div>
-                    <canvas id="chart_energy_crisis_and_geopolitical_shock_0" height="140"></canvas>
-                    <div class="chart-interpretation">Shows the dramatic oil price spike from the Iran conflict, highlighting energy market stress</div>
+                    <div class="chart-title">WTI Crude: Historic March Surge</div>
+                    <canvas id="chart_energy_crisis_and_inflation_dynamics_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows the unprecedented pace of oil price increases amid Strait of Hormuz closure</div>
                 </div>
                 <div class="chart-container">
-                    <div class="chart-title">Market Volatility Response</div>
-                    <canvas id="chart_energy_crisis_and_geopolitical_shock_1" height="140"></canvas>
-                    <div class="chart-interpretation">Demonstrates how geopolitical tensions have elevated financial market uncertainty</div>
+                    <div class="chart-title">Breakeven Inflation: Expectations Rising</div>
+                    <canvas id="chart_energy_crisis_and_inflation_dynamics_1" height="140"></canvas>
+                    <div class="chart-interpretation">Market-based measures suggest growing concern about persistent inflation</div>
                 </div>
                     
                 <div class="views-grid">
                     <div class="view-box consensus">
                         <div class="view-label">🎯 Consensus View</div>
-                        <p>Markets believe this energy shock will prove transitory, with most analysts expecting the conflict to resolve within 2-4 weeks as suggested by Secretary of State Rubio. The consensus assumes strategic petroleum reserves will be deployed effectively and that alternative supply routes will emerge quickly to mitigate shortages.</p>
+                        <p>Energy-driven inflation will prove transitory as markets adapt to alternative shipping routes and strategic petroleum reserves are deployed. Core inflation trends remain manageable, and the Fed should look through temporary energy spikes to avoid compounding economic damage from the conflict.</p>
                     </div>
                     <div class="view-box contrarian">
                         <div class="view-label">⚡ Contrarian View</div>
-                        <p>The energy crisis could persist far longer than markets expect, particularly if regional allies are drawn into the conflict or if critical infrastructure suffers lasting damage. Unlike previous oil shocks, this crisis affects refined products more severely than crude, creating structural bottlenecks that cannot be easily resolved through reserve releases or production increases elsewhere.</p>
+                        <p>Persistent energy supply disruption could trigger broader inflation expectations de-anchoring, especially with tight labor markets enabling pass-through to wages. Fed may need to tighten policy even amid recession risks to maintain credibility, similar to the early 1980s experience.</p>
                     </div>
                 </div>
                 </div>
             </section>
 
             <section class="report-section">
-                <h2>🏦 Central Bank Policy Pivots</h2>
+                <h2>📊 Bond Markets & Yield Curve Dynamics</h2>
                 <div class="section-body">
-                    <div class="analysis-text">The energy shock has forced central banks into an uncomfortable position of potentially fighting inflation while growth risks mount. Federal Reserve officials took a notably hawkish stance this week, with multiple speakers emphasizing concerns about second-round effects from energy price increases. Vice Chair Jefferson specifically warned about "ongoing uncertainty over tariff policy and the recent jump in energy prices" complicating the inflation outlook. Governor Barr highlighted the economy's resilience but noted that recent shocks have "complicated the Committee's efforts to return inflation to our 2 percent goal." The Fed funds rate remains at 3.64%, but markets are pricing in a higher probability of rate hikes if energy-driven inflation proves persistent. In Europe, the ECB faces an even more acute dilemma given the continent's higher energy import dependence. President Lagarde's speech acknowledged that "we find ourselves yet again in a different world" and emphasized the need to assess "the nature, size and persistence of the shock" before policy changes. Markets are now pricing in potential ECB rate hikes as early as April, despite growth concerns. The Bank of England similarly faces pressure, with the UK's high energy import dependence making it particularly vulnerable to oil price shocks.</div>
+                    <div class="analysis-text">Treasury markets have exhibited unusual behavior this week, with yields declining modestly despite the strong employment report—a pattern that reflects growing concerns about supply-side economic disruption overwhelming demand-side strength. The 10-year yield fell to 4.31% from 4.33%, while the 2-year dropped to 3.79% from 3.81%, suggesting markets are beginning to price recession risks alongside persistent inflation. The yield curve has steepened slightly, with the 10-2 spread widening to 52bp from 46bp two weeks ago, though it remains historically flat. More concerning is the behavior of credit spreads, where high-yield OAS has widened to 317bp from 316bp, showing early signs of stress despite still-accommodative levels. The peculiar combination of falling Treasury yields and stable credit spreads suggests flight-to-quality dynamics are beginning to emerge, even as economic data remains relatively solid. International bond markets are showing similar patterns, with the Bank of England's Financial Policy Committee explicitly warning about vulnerabilities in sovereign debt markets that could amplify under current stress conditions. The Fed's balance sheet continues its modest expansion, reaching $6.675 trillion as of April 1, primarily driven by seasonal factors and ongoing quantitative tightening operations. Bank reserves remain elevated at $2.96 trillion, providing ample liquidity buffers, though the slight decline from January levels bears monitoring.</div>
                     <div class="data-chips">
                 <div class="data-chip">
-                    <span class="chip-label">Fed Funds Rate</span>
-                    <span class="chip-value">3.64%</span>
-                    <span class="chip-change" style="color:#6b7280">→ Unchanged since March 18</span>
+                    <span class="chip-label">10-Year Treasury Yield</span>
+                    <span class="chip-value">4.31%</span>
+                    <span class="chip-change" style="color:#ef4444">↓ -2bp this week</span>
                 </div>
                 <div class="data-chip">
                     <span class="chip-label">2-Year Treasury Yield</span>
-                    <span class="chip-value">3.96%</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up 12bp from 3.84%</span>
+                    <span class="chip-value">3.79%</span>
+                    <span class="chip-change" style="color:#ef4444">↓ -2bp this week</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">10-Year Treasury Yield</span>
-                    <span class="chip-value">4.42%</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up 9bp from 4.33%</span>
+                    <span class="chip-label">10-2 Yield Spread</span>
+                    <span class="chip-value">52bp</span>
+                    <span class="chip-change" style="color:#10b981">↑ +6bp vs two weeks ago</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">Yield Curve (10Y-2Y)</span>
-                    <span class="chip-value">0.56%</span>
-                    <span class="chip-change" style="color:#10b981">↑ Steepening from 0.46%</span>
+                    <span class="chip-label">High Yield OAS</span>
+                    <span class="chip-value">317bp</span>
+                    <span class="chip-change" style="color:#10b981">↑ +1bp this week</span>
                 </div></div>
                     
                 <div class="chart-container">
-                    <div class="chart-title">Federal Funds Rate</div>
-                    <canvas id="chart_central_bank_policy_pivots_0" height="140"></canvas>
-                    <div class="chart-interpretation">Shows the Fed's current policy stance amid growing inflation concerns</div>
+                    <div class="chart-title">10-Year Treasury: Conflicted Signals</div>
+                    <canvas id="chart_bond_markets_and_yield_curve_dynamics_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows recent yield decline despite strong data, suggesting recession fears are mounting</div>
                 </div>
                 <div class="chart-container">
-                    <div class="chart-title">10-Year Treasury Yield</div>
-                    <canvas id="chart_central_bank_policy_pivots_1" height="140"></canvas>
-                    <div class="chart-interpretation">Reflects market expectations for higher rates due to inflation risks</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Yield Curve Steepening</div>
-                    <canvas id="chart_central_bank_policy_pivots_2" height="140"></canvas>
-                    <div class="chart-interpretation">Indicates growing inflation expectations and potential policy tightening ahead</div>
+                    <div class="chart-title">Yield Curve: Gradual Steepening</div>
+                    <canvas id="chart_bond_markets_and_yield_curve_dynamics_1" height="140"></canvas>
+                    <div class="chart-interpretation">Modest steepening may signal growing recession expectations</div>
                 </div>
                     
                 <div class="views-grid">
                     <div class="view-box consensus">
                         <div class="view-label">🎯 Consensus View</div>
-                        <p>Central banks will maintain current rates and wait for the energy shock to dissipate before making major policy changes. Most analysts expect policymakers to look through temporary energy price spikes and focus on underlying inflation trends.</p>
+                        <p>Bond market behavior reflects rational pricing of supply shock impacts on growth, with yields appropriately declining as recession risks rise. Credit spreads remain contained, suggesting financial conditions are stable and systemic risks are manageable despite geopolitical tensions.</p>
                     </div>
                     <div class="view-box contrarian">
                         <div class="view-label">⚡ Contrarian View</div>
-                        <p>Central banks may be forced into aggressive policy tightening much sooner than expected if energy prices remain elevated and inflation expectations become unanchored. The risk of a 1970s-style wage-price spiral could compel preemptive rate hikes even as growth slows.</p>
+                        <p>The disconnect between falling Treasury yields and strong employment data signals market dysfunction and potential for sharp volatility spikes. If energy prices continue rising, bonds could face selling pressure from inflation concerns just as credit conditions tighten, creating dangerous feedback loops.</p>
                     </div>
                 </div>
                 </div>
             </section>
 
             <section class="report-section">
-                <h2>📈 Inflation Expectations & Wage Dynamics</h2>
+                <h2>🌍 Financial Stability & Global Risks</h2>
                 <div class="section-body">
-                    <div class="analysis-text">Inflation dynamics are showing renewed pressure from the energy shock, with market-based indicators reflecting growing concern about persistent price pressures. The 5-year breakeven inflation rate has remained elevated at 2.56%, while 10-year breakevens have moderated slightly to 2.31%. However, these measures may not fully capture the potential for energy-driven inflation to become entrenched in wage bargaining. The ECB's wage tracker provides some comfort, showing negotiated wage growth easing from 3.2% in 2025 to a projected 2.3% in 2026, but this data predates the current energy crisis. University of Michigan inflation expectations have shown volatility, dropping from 4.0% in January to 3.4% in February, but March data will be crucial in assessing whether the energy shock has altered consumer expectations. The February CPI data, released this week, showed headline inflation at 2.7% year-over-year with core at 2.2%, but these figures don't reflect the current energy surge. The risk is that sustained high energy prices could reverse the recent progress on inflation, particularly if they feed through to services prices and wage demands. European consumer expectations surveys conducted before the conflict showed inflation expectations declining, but this baseline is now obsolete given the changed energy landscape.</div>
+                    <div class="analysis-text">The Bank of England's Financial Policy Committee delivered a sobering assessment this week, highlighting how the Middle East conflict has created conditions for multiple financial vulnerabilities to crystallize simultaneously. The FPC specifically flagged risks in sovereign debt markets, elevated asset valuations, and the rapidly growing private credit sector as areas where current shocks could amplify systemic stress. Their warning about 'large, frequent and potentially overlapping shocks' in an increasingly unpredictable global environment resonates with similar concerns being voiced by central banks worldwide. The Chicago Fed's National Financial Conditions Index has tightened to -0.43 from -0.45, still indicating accommodative conditions but moving in the wrong direction. Equity volatility, as measured by the VIX, has declined to 24.54 from above 30 during the worst of the energy price surge, but remains elevated compared to pre-crisis levels around 20. The dollar has strengthened to 120.89 on the broad trade-weighted index, creating additional pressure on emerging market economies already struggling with energy import costs. European Central Bank officials are simultaneously advancing their digital euro project and stablecoin regulatory framework, recognizing the need for financial system resilience amid geopolitical fragmentation. This comes as central banks globally are reassessing the vulnerabilities created by interconnected markets and single points of failure, lessons learned acutely during the energy crisis as Europe discovered its dependence on Middle Eastern oil supplies.</div>
                     <div class="data-chips">
                 <div class="data-chip">
-                    <span class="chip-label">5-Year Breakeven Inflation</span>
-                    <span class="chip-value">2.56%</span>
-                    <span class="chip-change" style="color:#6b7280">→ Unchanged from prior day</span>
+                    <span class="chip-label">Chicago Fed NFCI</span>
+                    <span class="chip-value">-0.43</span>
+                    <span class="chip-change" style="color:#10b981">↑ Tightening from -0.45</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">10-Year Breakeven Inflation</span>
-                    <span class="chip-value">2.31%</span>
-                    <span class="chip-change" style="color:#ef4444">↓ Down 3bp from 2.34%</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">February CPI</span>
-                    <span class="chip-value">2.7% YoY</span>
-                    <span class="chip-change" style="color:#10b981">↑ From 327.46 index level</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Core CPI (Feb)</span>
-                    <span class="chip-value">2.2% YoY</span>
-                    <span class="chip-change" style="color:#10b981">↑ From 333.512 index level</span>
-                </div></div>
-                    
-                <div class="chart-container">
-                    <div class="chart-title">10-Year Breakeven Inflation Rate</div>
-                    <canvas id="chart_inflation_expectations_and_wage_dynamics_0" height="140"></canvas>
-                    <div class="chart-interpretation">Shows market-based inflation expectations amid the energy crisis</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Consumer Price Index</div>
-                    <canvas id="chart_inflation_expectations_and_wage_dynamics_1" height="140"></canvas>
-                    <div class="chart-interpretation">Latest inflation data, though pre-dating the current energy shock</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">University of Michigan Inflation Expectations</div>
-                    <canvas id="chart_inflation_expectations_and_wage_dynamics_2" height="140"></canvas>
-                    <div class="chart-interpretation">Consumer inflation expectations, key for central bank policy</div>
-                </div>
-                    
-                <div class="views-grid">
-                    <div class="view-box consensus">
-                        <div class="view-label">🎯 Consensus View</div>
-                        <p>Inflation expectations remain anchored around central bank targets, and the current energy shock will prove transitory without affecting underlying price dynamics. Wage growth continues to moderate in line with central bank objectives.</p>
-                    </div>
-                    <div class="view-box contrarian">
-                        <div class="view-label">⚡ Contrarian View</div>
-                        <p>The energy shock could trigger a broader inflation resurgence, particularly if supply chain disruptions extend beyond energy markets. Wage negotiations later this year could incorporate higher inflation expectations, creating a persistent upward bias in price pressures.</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <section class="report-section">
-                <h2>📉 Financial Markets Under Stress</h2>
-                <div class="section-body">
-                    <div class="analysis-text">Financial markets are experiencing severe stress as traditional diversification strategies fail amid the simultaneous decline in both stocks and bonds. The correlation between equity and fixed income markets has turned sharply positive, eliminating the typical hedge that government bonds provide during risk-off periods. High-yield credit spreads have widened to 3.21%, up from 3.17% earlier in the week, reflecting growing concern about corporate earnings and refinancing risks in a higher rate environment. The VIX has surged to 27.44 from 22.37 just over a week ago, indicating elevated fear in equity markets. Currency markets are showing significant stress, with the dollar strengthening to 120.28 on the broad trade-weighted index as investors seek safe haven assets. The breakdown of the traditional 60-40 portfolio construction—with both stocks and bonds falling—has left investors with few places to hide beyond commodities and cash. Gold, typically a beneficiary during crisis periods, has shown mixed performance as rising real interest rates compete with safe-haven demand. The Chicago Fed's National Financial Conditions Index at -0.475 suggests conditions remain accommodative, but this may lag the recent deterioration in market functioning.</div>
-                    <div class="data-chips">
-                <div class="data-chip">
-                    <span class="chip-label">High Yield Spreads</span>
-                    <span class="chip-value">3.21%</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up 4bp from 3.17%</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">VIX Index</span>
-                    <span class="chip-value">27.44</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up from 22.37 on March 17</span>
+                    <span class="chip-label">VIX Volatility</span>
+                    <span class="chip-value">24.54</span>
+                    <span class="chip-change" style="color:#ef4444">↓ Down from 31+ peak</span>
                 </div>
                 <div class="data-chip">
                     <span class="chip-label">Dollar Index (Broad)</span>
-                    <span class="chip-value">120.28</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up from 119.83 prior</span>
+                    <span class="chip-value">120.89</span>
+                    <span class="chip-change" style="color:#10b981">↑ Near recent highs</span>
                 </div>
                 <div class="data-chip">
-                    <span class="chip-label">Financial Conditions</span>
-                    <span class="chip-value">-0.475</span>
-                    <span class="chip-change" style="color:#10b981">↑ Tightening from -0.488</span>
+                    <span class="chip-label">BoE FPC Assessment</span>
+                    <span class="chip-value">Elevated risks</span>
+                    <span class="chip-change" style="color:#10b981">↑ Multiple vulnerabilities</span>
                 </div></div>
                     
                 <div class="chart-container">
-                    <div class="chart-title">High Yield Credit Spreads</div>
-                    <canvas id="chart_financial_markets_under_stress_0" height="140"></canvas>
-                    <div class="chart-interpretation">Shows widening credit spreads reflecting increased corporate stress</div>
+                    <div class="chart-title">Financial Conditions: Modest Tightening</div>
+                    <canvas id="chart_financial_stability_and_global_risks_0" height="140"></canvas>
+                    <div class="chart-interpretation">Shows gradual tightening in financial conditions as stress builds across markets</div>
                 </div>
                 <div class="chart-container">
-                    <div class="chart-title">VIX Volatility Index</div>
-                    <canvas id="chart_financial_markets_under_stress_1" height="140"></canvas>
-                    <div class="chart-interpretation">Demonstrates elevated market fear amid geopolitical tensions</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Financial Conditions Index</div>
-                    <canvas id="chart_financial_markets_under_stress_2" height="140"></canvas>
-                    <div class="chart-interpretation">Tracks overall financial system stress levels</div>
+                    <div class="chart-title">Market Volatility: Still Elevated</div>
+                    <canvas id="chart_financial_stability_and_global_risks_1" height="140"></canvas>
+                    <div class="chart-interpretation">VIX remains above normal levels despite recent decline from crisis peaks</div>
                 </div>
                     
                 <div class="views-grid">
                     <div class="view-box consensus">
                         <div class="view-label">🎯 Consensus View</div>
-                        <p>Market stress is temporary and driven by geopolitical uncertainty. Once the Iran conflict resolves, traditional asset class correlations will normalize and the 60-40 portfolio will regain its diversification benefits.</p>
+                        <p>Financial system resilience built up since the global financial crisis provides adequate buffers to absorb current shocks. Central bank coordination and ample liquidity provision should prevent localized stress from becoming systemic, while diversified energy supplies will eventually reduce dependency risks.</p>
                     </div>
                     <div class="view-box contrarian">
                         <div class="view-label">⚡ Contrarian View</div>
-                        <p>We may be entering a new regime where inflation shocks create persistent positive correlation between stocks and bonds, fundamentally challenging traditional portfolio construction and forcing a shift toward real assets and alternative investments.</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <section class="report-section">
-                <h2>👷 Labor Market Resilience</h2>
-                <div class="section-body">
-                    <div class="analysis-text">The labor market continues to show remarkable resilience despite broader economic uncertainties, though some softening is becoming evident. February unemployment rose modestly to 4.4% from 4.3% in January, while nonfarm payrolls declined by 92,000—the first monthly decline since the recovery began. However, initial jobless claims remain relatively benign at 210,000 for the week ending March 21, up only modestly from 205,000 the prior week. JOLTS job openings surged to 6.95 million in January, suggesting continued labor demand despite economic headwinds. The unemployment rate remains well below historical averages and consistent with the Fed's full employment mandate. However, the combination of slowing payroll growth and rising unemployment, albeit from very low levels, suggests the labor market may be cooling in line with Fed objectives. The energy shock's impact on employment may not be immediately visible in the data, but sectors like transportation, logistics, and energy-intensive manufacturing could face pressure if fuel costs remain elevated. Consumer sentiment improved slightly to 56.6 in February from 56.4, but this data predates the current crisis and likely does not reflect current conditions.</div>
-                    <div class="data-chips">
-                <div class="data-chip">
-                    <span class="chip-label">Unemployment Rate</span>
-                    <span class="chip-value">4.4%</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up 0.1pp from 4.3%</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Nonfarm Payrolls</span>
-                    <span class="chip-value">-92,000</span>
-                    <span class="chip-change" style="color:#ef4444">↓ First monthly decline</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">Initial Claims</span>
-                    <span class="chip-value">210,000</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up from 205,000 prior week</span>
-                </div>
-                <div class="data-chip">
-                    <span class="chip-label">JOLTS Openings</span>
-                    <span class="chip-value">6.95 million</span>
-                    <span class="chip-change" style="color:#10b981">↑ Up 396,000 from December</span>
-                </div></div>
-                    
-                <div class="chart-container">
-                    <div class="chart-title">Unemployment Rate</div>
-                    <canvas id="chart_labor_market_resilience_0" height="140"></canvas>
-                    <div class="chart-interpretation">Shows the gradual rise from historical lows, indicating labor market cooling</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Nonfarm Payrolls</div>
-                    <canvas id="chart_labor_market_resilience_1" height="140"></canvas>
-                    <div class="chart-interpretation">Displays the first monthly employment decline, suggesting economic softening</div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">Initial Jobless Claims</div>
-                    <canvas id="chart_labor_market_resilience_2" height="140"></canvas>
-                    <div class="chart-interpretation">Weekly indicator of labor market stress, remaining at manageable levels</div>
-                </div>
-                    
-                <div class="views-grid">
-                    <div class="view-box consensus">
-                        <div class="view-label">🎯 Consensus View</div>
-                        <p>The labor market remains healthy with unemployment near historical lows. Any weakness is viewed as a welcome cooling that will help reduce wage pressures and support the Fed's inflation objectives without triggering a recession.</p>
-                    </div>
-                    <div class="view-box contrarian">
-                        <div class="view-label">⚡ Contrarian View</div>
-                        <p>The labor market may be more fragile than it appears, with recent softening potentially accelerating if the energy crisis triggers broader economic weakness. Service sector employment, which has driven job growth, could be particularly vulnerable to consumer spending cuts.</p>
+                        <p>The combination of elevated asset prices, high debt levels, and new vulnerabilities in private credit creates conditions similar to 2008, but with less policy space to respond. Multiple simultaneous shocks could overwhelm even well-capitalized financial systems, especially if energy crisis persists.</p>
                     </div>
                 </div>
                 </div>
@@ -645,19 +575,19 @@ body {
                     <td class="dash-change" style="color:#6b7280">→ Unchanged</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">2-Year Treasury</td>
-                    <td class="dash-value">3.96%</td>
-                    <td class="dash-change" style="color:#10b981">↑ +12bp</td>
+                    <td class="dash-label">10Y Treasury</td>
+                    <td class="dash-value">4.31%</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -2bp weekly</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">10-Year Treasury</td>
-                    <td class="dash-value">4.42%</td>
-                    <td class="dash-change" style="color:#10b981">↑ +9bp</td>
+                    <td class="dash-label">2Y Treasury</td>
+                    <td class="dash-value">3.79%</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -2bp weekly</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">High Yield Spread</td>
-                    <td class="dash-value">3.21%</td>
-                    <td class="dash-change" style="color:#10b981">↑ +4bp</td>
+                    <td class="dash-label">High Yield OAS</td>
+                    <td class="dash-value">317bp</td>
+                    <td class="dash-change" style="color:#10b981">↑ +1bp weekly</td>
                 </tr>
                 </table>
             </div>
@@ -666,24 +596,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">CPI (Feb)</td>
-                    <td class="dash-value">2.7% YoY</td>
-                    <td class="dash-change" style="color:#10b981">↑ Latest available</td>
-                </tr>
-                <tr>
-                    <td class="dash-label">Core CPI (Feb)</td>
-                    <td class="dash-value">2.2% YoY</td>
-                    <td class="dash-change" style="color:#10b981">↑ Latest available</td>
+                    <td class="dash-label">Core PCE (Jan)</td>
+                    <td class="dash-value">4.4% annualized</td>
+                    <td class="dash-change" style="color:#10b981">↑ Above target</td>
                 </tr>
                 <tr>
                     <td class="dash-label">5Y Breakeven</td>
-                    <td class="dash-value">2.56%</td>
-                    <td class="dash-change" style="color:#6b7280">→ Unchanged</td>
+                    <td class="dash-value">2.61%</td>
+                    <td class="dash-change" style="color:#10b981">↑ +10bp weekly</td>
                 </tr>
                 <tr>
                     <td class="dash-label">10Y Breakeven</td>
-                    <td class="dash-value">2.31%</td>
-                    <td class="dash-change" style="color:#ef4444">↓ -3bp</td>
+                    <td class="dash-value">2.36%</td>
+                    <td class="dash-change" style="color:#10b981">↑ +5bp weekly</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">Michigan Expectations</td>
+                    <td class="dash-value">3.4%</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -0.6pp monthly</td>
                 </tr>
                 </table>
             </div>
@@ -692,24 +622,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">Unemployment</td>
-                    <td class="dash-value">4.4%</td>
-                    <td class="dash-change" style="color:#10b981">↑ +0.1pp</td>
+                    <td class="dash-label">Unemployment Rate</td>
+                    <td class="dash-value">4.3%</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -0.1pp</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Payrolls (Feb)</td>
-                    <td class="dash-value">-92K</td>
-                    <td class="dash-change" style="color:#ef4444">↓ First decline</td>
+                    <td class="dash-label">Nonfarm Payrolls</td>
+                    <td class="dash-value">+178K</td>
+                    <td class="dash-change" style="color:#10b981">↑ +311K vs Feb</td>
                 </tr>
                 <tr>
                     <td class="dash-label">Initial Claims</td>
-                    <td class="dash-value">210K</td>
-                    <td class="dash-change" style="color:#10b981">↑ +5K</td>
+                    <td class="dash-value">202K</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -9K weekly</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">JOLTS Openings</td>
-                    <td class="dash-value">6.95M</td>
-                    <td class="dash-change" style="color:#10b981">↑ +396K</td>
+                    <td class="dash-label">Job Openings</td>
+                    <td class="dash-value">6.88M</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -358K monthly</td>
                 </tr>
                 </table>
             </div>
@@ -720,22 +650,22 @@ body {
                 <tr>
                     <td class="dash-label">Industrial Production</td>
                     <td class="dash-value">102.55</td>
-                    <td class="dash-change" style="color:#10b981">↑ +0.15</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.15 monthly</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Retail Sales Ex-Food</td>
-                    <td class="dash-value">$633.7B</td>
-                    <td class="dash-change" style="color:#ef4444">↓ -$964M</td>
-                </tr>
-                <tr>
-                    <td class="dash-label">Housing Starts</td>
-                    <td class="dash-value">1.487M</td>
-                    <td class="dash-change" style="color:#10b981">↑ +100K</td>
+                    <td class="dash-label">Retail Sales ex-Food</td>
+                    <td class="dash-value">$638.2B</td>
+                    <td class="dash-change" style="color:#10b981">↑ +$4.0B monthly</td>
                 </tr>
                 <tr>
                     <td class="dash-label">Consumer Sentiment</td>
                     <td class="dash-value">56.6</td>
-                    <td class="dash-change" style="color:#10b981">↑ +0.2</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.2 monthly</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">Housing Starts</td>
+                    <td class="dash-value">1.487M</td>
+                    <td class="dash-change" style="color:#10b981">↑ +100K monthly</td>
                 </tr>
                 </table>
             </div>
@@ -744,24 +674,24 @@ body {
                 <table class="dash-table">
                     
                 <tr>
-                    <td class="dash-label">VIX</td>
-                    <td class="dash-value">27.44</td>
-                    <td class="dash-change" style="color:#10b981">↑ +2.11</td>
-                </tr>
-                <tr>
-                    <td class="dash-label">NFCI</td>
-                    <td class="dash-value">-0.475</td>
+                    <td class="dash-label">Chicago Fed NFCI</td>
+                    <td class="dash-value">-0.43</td>
                     <td class="dash-change" style="color:#10b981">↑ Tightening</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Dollar Index</td>
-                    <td class="dash-value">120.28</td>
-                    <td class="dash-change" style="color:#10b981">↑ +0.10</td>
+                    <td class="dash-label">VIX</td>
+                    <td class="dash-value">24.54</td>
+                    <td class="dash-change" style="color:#ef4444">↓ -0.71 daily</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Fed Balance Sheet</td>
-                    <td class="dash-value">$6.66T</td>
-                    <td class="dash-change" style="color:#10b981">↑ +$1.2B</td>
+                    <td class="dash-label">Dollar Index</td>
+                    <td class="dash-value">120.89</td>
+                    <td class="dash-change" style="color:#10b981">↑ +0.50 daily</td>
+                </tr>
+                <tr>
+                    <td class="dash-label">M2 Money Supply</td>
+                    <td class="dash-value">$22.7T</td>
+                    <td class="dash-change" style="color:#10b981">↑ +$198B monthly</td>
                 </tr>
                 </table>
             </div>
@@ -771,23 +701,23 @@ body {
                     
                 <tr>
                     <td class="dash-label">WTI Crude</td>
-                    <td class="dash-value">$89.33</td>
-                    <td class="dash-change" style="color:#ef4444">↓ -$9.38</td>
+                    <td class="dash-value">$104.69</td>
+                    <td class="dash-change" style="color:#10b981">↑ +49% monthly</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Oil Peak (Week)</td>
-                    <td class="dash-value">$114</td>
-                    <td class="dash-change" style="color:#10b981">↑ 2022 highs</td>
+                    <td class="dash-label">Brent Crude</td>
+                    <td class="dash-value">~$110</td>
+                    <td class="dash-change" style="color:#10b981">↑ +55% monthly</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">ECB Wage Growth</td>
-                    <td class="dash-value">2.3% (2026E)</td>
-                    <td class="dash-change" style="color:#ef4444">↓ From 3.2% (2025)</td>
+                    <td class="dash-label">Strait of Hormuz</td>
+                    <td class="dash-value">Closed</td>
+                    <td class="dash-change" style="color:#6b7280">→ Week 5</td>
                 </tr>
                 <tr>
-                    <td class="dash-label">Euro Area Inflation</td>
-                    <td class="dash-value">1.9% (Feb)</td>
-                    <td class="dash-change" style="color:#ef4444">↓ Pre-war data</td>
+                    <td class="dash-label">Energy Policy Uncertainty</td>
+                    <td class="dash-value">Extreme</td>
+                    <td class="dash-change" style="color:#10b981">↑ Elevated globally</td>
                 </tr>
                 </table>
             </div>
@@ -800,7 +730,7 @@ body {
             <div class="week-ahead-grid">
                 <div class="wa-panel">
                     <h3>Key Catalysts</h3>
-                    <ul class="catalyst-list"><li class="catalyst-item">📌 Iran war developments and energy market impacts</li><li class="catalyst-item">📌 Central bank communications on inflation response</li><li class="catalyst-item">📌 Q1 2026 earnings season begins</li></ul>
+                    <ul class="catalyst-list"><li class="catalyst-item">📌 FOMC Minutes (March meeting) - Wednesday, April 10</li><li class="catalyst-item">📌 CPI Report (March) - Thursday, April 11</li><li class="catalyst-item">📌 PPI Report (March) - Friday, April 12</li><li class="catalyst-item">📌 Middle East conflict developments</li><li class="catalyst-item">📌 Energy price movements and shipping updates</li></ul>
                 </div>
                 <div class="wa-panel wide">
                     <h3>Data Calendar</h3>
@@ -810,47 +740,47 @@ body {
                         </thead>
                         <tbody>
             <tr>
-                <td class="release-date">Monday, March 31</td>
-                <td class="release-name">Personal Income & Spending</td>
-                <td class="release-prior">0.3% MoM</td>
-                <td class="release-consensus">0.2% MoM</td>
+                <td class="release-date">Tuesday, April 9</td>
+                <td class="release-name">JOLTS Job Openings</td>
+                <td class="release-prior">6.88M</td>
+                <td class="release-consensus">6.75M</td>
             </tr>
             <tr>
-                <td class="release-date">Tuesday, April 1</td>
-                <td class="release-name">ISM Manufacturing</td>
-                <td class="release-prior">47.8</td>
-                <td class="release-consensus">48.2</td>
+                <td class="release-date">Wednesday, April 10</td>
+                <td class="release-name">FOMC Minutes</td>
+                <td class="release-prior">Hawkish</td>
+                <td class="release-consensus">Energy shock discussion</td>
             </tr>
             <tr>
-                <td class="release-date">Wednesday, April 2</td>
-                <td class="release-name">ADP Employment</td>
-                <td class="release-prior">140K</td>
-                <td class="release-consensus">120K</td>
+                <td class="release-date">Thursday, April 11</td>
+                <td class="release-name">CPI (March)</td>
+                <td class="release-prior">0.27% monthly</td>
+                <td class="release-consensus">0.45% monthly</td>
             </tr>
             <tr>
-                <td class="release-date">Friday, April 4</td>
-                <td class="release-name">Employment Report</td>
-                <td class="release-prior">-92K</td>
-                <td class="release-consensus">150K</td>
+                <td class="release-date">Friday, April 12</td>
+                <td class="release-name">PPI (March)</td>
+                <td class="release-prior">0.1% monthly</td>
+                <td class="release-consensus">0.8% monthly</td>
             </tr>
             <tr>
-                <td class="release-date">Friday, April 4</td>
-                <td class="release-name">March CPI</td>
-                <td class="release-prior">2.7% YoY</td>
-                <td class="release-consensus">3.2% YoY*</td>
+                <td class="release-date">Friday, April 12</td>
+                <td class="release-name">Consumer Sentiment (Prelim)</td>
+                <td class="release-prior">56.6</td>
+                <td class="release-consensus">54.0</td>
             </tr></tbody>
                     </table>
                 </div>
                 <div class="wa-panel">
                     <h3>Risks to Watch</h3>
-                    <ul class="risk-list"><li class="risk-item">⚠️ Energy crisis escalation beyond current assumptions</li><li class="risk-item">⚠️ Early central bank policy tightening surprising markets</li><li class="risk-item">⚠️ Corporate earnings weakness from energy cost pressures</li></ul>
+                    <ul class="risk-list"><li class="risk-item">⚠️ Upside: Strait of Hormuz reopening could trigger sharp energy price reversal</li><li class="risk-item">⚠️ Downside: Escalation in Middle East conflict could push oil above $120/barrel</li><li class="risk-item">⚠️ Policy risk: Fed could signal emergency rate hikes if inflation expectations de-anchor</li></ul>
                 </div>
             </div>
         </section>
 
     <div class="bottom-line">
         <h2>🎯 The Bottom Line</h2>
-        <p>The Iran war has fundamentally altered the economic landscape, forcing markets and policymakers into crisis mode as energy prices surge and traditional diversification strategies fail. Central banks face the impossible choice between fighting inflation and supporting growth, with several potentially pivoting to tightening as early as April. The key variable to watch next week is whether energy markets stabilize or continue escalating, as this will determine whether we're facing a temporary shock or the beginning of a sustained inflationary regime that could derail the global recovery.</p>
+        <p>The collision between labor market resilience and energy-driven inflation has created the Fed's worst nightmare: stagflationary conditions with limited policy space. While March's strong jobs report seemingly validates the economy's durability, the combination of rising breakeven inflation expectations and persistent energy supply disruption suggests the Fed may soon face an impossible choice between supporting growth and maintaining price stability. Watch March CPI data closely—if energy costs push headline inflation meaningfully above 4%, the Fed's credibility could be at stake regardless of labor market strength.</p>
     </div>
 
     <footer class="report-footer">
@@ -864,747 +794,15 @@ body {
 document.addEventListener('DOMContentLoaded', function() {
     
     (function() {
-        const ctx = document.getElementById('chart_energy_crisis_and_geopolitical_shock_0');
+        const ctx = document.getElementById('chart_labor_markets_and_fed_policy_recalibration_0');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["2025-12-24", "2025-12-26", "2025-12-29", "2025-12-30", "2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23"],
-                datasets: [{
-                    label: 'WTI Crude Oil Price',
-                    data: [58.72, 56.6, 57.89, 57.79, 57.26, 57.21, 58.1, 56.97, 56.01, 57.74, 58.96, 59.39, 60.85, 61.84, 59.13, 59.4, 60.3, 60.38, 59.24, 60.7, 60.46, 62.04, 62.75, 64.77, 64.5, 61.6, 62.62, 64.56, 62.9, 63.77, 64.53, 64.2, 64.8, 63.08, 63.05, 62.53, 65.33, 66.66, 66.69, 66.36, 65.62, 65.3, 65.1, 66.96, 71.13, 74.48, 74.58, 80.88, 90.77, 94.65, 83.71, 86.8, 95.61, 98.48, 93.39, 96.01, 96.12, 96.11, 98.71, 89.33],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Dollars per Barrel',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_energy_crisis_and_geopolitical_shock_1');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
-                datasets: [{
-                    label: 'VIX (Volatility Index)',
-                    data: [14.51, 14.9, 14.75, 15.38, 15.45, 14.49, 15.12, 15.98, 16.75, 15.84, 15.86, 18.84, 20.09, 16.9, 15.64, 16.09, 16.15, 16.35, 16.35, 16.88, 17.44, 16.34, 18.0, 18.64, 21.77, 17.76, 17.36, 17.79, 17.65, 20.82, 20.6, 21.2, 20.29, 19.62, 20.23, 19.09, 21.01, 19.55, 17.93, 18.63, 19.86, 21.44, 23.57, 21.15, 23.75, 29.49, 25.5, 24.93, 24.23, 27.29, 27.19, 23.51, 22.37, 25.09, 24.06, 26.78, 26.15, 26.95, 25.33, 27.44],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Index',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_central_bank_policy_pivots_0');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-01-31", "2026-02-01", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-07", "2026-02-08", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-14", "2026-02-15", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-21", "2026-02-22", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-02-28", "2026-03-01", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-14", "2026-03-15", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-21", "2026-03-22", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
-                datasets: [{
-                    label: 'Fed Funds Effective Rate',
-                    data: [3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64, 3.64],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_central_bank_policy_pivots_1');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-12-30", "2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
-                datasets: [{
-                    label: '10-Year Treasury Yield',
-                    data: [4.14, 4.18, 4.19, 4.17, 4.18, 4.15, 4.19, 4.18, 4.19, 4.18, 4.15, 4.17, 4.24, 4.3, 4.26, 4.26, 4.24, 4.22, 4.24, 4.26, 4.24, 4.26, 4.29, 4.28, 4.29, 4.21, 4.22, 4.22, 4.16, 4.18, 4.09, 4.04, 4.05, 4.09, 4.08, 4.08, 4.03, 4.04, 4.05, 4.02, 3.97, 4.05, 4.06, 4.09, 4.13, 4.15, 4.12, 4.15, 4.21, 4.27, 4.28, 4.23, 4.2, 4.26, 4.25, 4.39, 4.34, 4.39, 4.33, 4.42],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_central_bank_policy_pivots_2');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27"],
-                datasets: [{
-                    label: '10Y-2Y Spread (Yield Curve)',
-                    data: [0.71, 0.72, 0.71, 0.71, 0.68, 0.7, 0.64, 0.65, 0.65, 0.64, 0.61, 0.65, 0.7, 0.66, 0.65, 0.64, 0.66, 0.71, 0.7, 0.71, 0.74, 0.72, 0.71, 0.72, 0.74, 0.72, 0.74, 0.71, 0.66, 0.62, 0.64, 0.62, 0.62, 0.61, 0.6, 0.6, 0.61, 0.6, 0.6, 0.59, 0.58, 0.55, 0.55, 0.56, 0.59, 0.56, 0.58, 0.57, 0.51, 0.55, 0.55, 0.52, 0.5, 0.46, 0.51, 0.51, 0.49, 0.49, 0.46, 0.56],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_inflation_expectations_and_wage_dynamics_0');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-12-31", "2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27"],
-                datasets: [{
-                    label: '10-Year Breakeven Inflation',
-                    data: [2.25, 2.25, 2.26, 2.27, 2.27, 2.27, 2.28, 2.29, 2.3, 2.29, 2.29, 2.33, 2.33, 2.34, 2.31, 2.32, 2.32, 2.34, 2.36, 2.35, 2.36, 2.35, 2.36, 2.35, 2.32, 2.34, 2.35, 2.32, 2.32, 2.29, 2.27, 2.26, 2.29, 2.29, 2.28, 2.26, 2.26, 2.28, 2.28, 2.25, 2.29, 2.29, 2.29, 2.31, 2.35, 2.34, 2.33, 2.36, 2.38, 2.36, 2.36, 2.37, 2.4, 2.37, 2.38, 2.33, 2.33, 2.31, 2.34, 2.31],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_inflation_expectations_and_wage_dynamics_1');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01"],
-                datasets: [{
-                    label: 'CPI (All Urban Consumers)',
-                    data: [319.785, 320.302, 320.62, 321.435, 322.169, 323.291, 324.245, 325.063, 326.031, 326.588, 327.46],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Index 1982-1984=100',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_inflation_expectations_and_wage_dynamics_2');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01"],
-                datasets: [{
-                    label: 'U of Michigan Inflation Expectations',
-                    data: [5.0, 6.5, 6.6, 5.0, 4.5, 4.8, 4.7, 4.6, 4.5, 4.2, 4.0, 3.4],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_financial_markets_under_stress_0');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-01-31", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-02-28", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
-                datasets: [{
-                    label: 'High Yield OAS Spread',
-                    data: [2.79, 2.79, 2.76, 2.74, 2.74, 2.75, 2.76, 2.71, 2.65, 2.65, 2.73, 2.69, 2.64, 2.68, 2.69, 2.71, 2.72, 2.77, 2.8, 2.88, 2.81, 2.85, 2.86, 2.97, 2.87, 2.84, 2.86, 2.84, 2.92, 2.95, 2.94, 2.94, 2.86, 2.88, 2.86, 2.95, 2.97, 2.94, 2.98, 3.1, 3.12, 3.03, 3.08, 2.97, 3.0, 3.13, 3.19, 3.06, 3.09, 3.17, 3.28, 3.27, 3.22, 3.2, 3.27, 3.24, 3.19, 3.19, 3.17, 3.21],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_financial_markets_under_stress_1');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"],
-                datasets: [{
-                    label: 'VIX (Volatility Index)',
-                    data: [14.51, 14.9, 14.75, 15.38, 15.45, 14.49, 15.12, 15.98, 16.75, 15.84, 15.86, 18.84, 20.09, 16.9, 15.64, 16.09, 16.15, 16.35, 16.35, 16.88, 17.44, 16.34, 18.0, 18.64, 21.77, 17.76, 17.36, 17.79, 17.65, 20.82, 20.6, 21.2, 20.29, 19.62, 20.23, 19.09, 21.01, 19.55, 17.93, 18.63, 19.86, 21.44, 23.57, 21.15, 23.75, 29.49, 25.5, 24.93, 24.23, 27.29, 27.19, 23.51, 22.37, 25.09, 24.06, 26.78, 26.15, 26.95, 25.33, 27.44],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Index',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_financial_markets_under_stress_2');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-03-28", "2025-04-04", "2025-04-11", "2025-04-18", "2025-04-25", "2025-05-02", "2025-05-09", "2025-05-16", "2025-05-23", "2025-05-30", "2025-06-06", "2025-06-13", "2025-06-20", "2025-06-27", "2025-07-04", "2025-07-11", "2025-07-18", "2025-07-25", "2025-08-01", "2025-08-08", "2025-08-15", "2025-08-22", "2025-08-29", "2025-09-05", "2025-09-12", "2025-09-19", "2025-09-26", "2025-10-03", "2025-10-10", "2025-10-17", "2025-10-24", "2025-10-31", "2025-11-07", "2025-11-14", "2025-11-21", "2025-11-28", "2025-12-05", "2025-12-12", "2025-12-19", "2025-12-26", "2026-01-02", "2026-01-09", "2026-01-16", "2026-01-23", "2026-01-30", "2026-02-06", "2026-02-13", "2026-02-20", "2026-02-27", "2026-03-06", "2026-03-13", "2026-03-20"],
-                datasets: [{
-                    label: 'Chicago Fed National Financial Conditions',
-                    data: [-0.41199, -0.39697, -0.38619, -0.3866, -0.39309, -0.40638, -0.42359, -0.44104, -0.45569, -0.46757, -0.47675, -0.48425, -0.4907, -0.49741, -0.50439, -0.51092, -0.51597, -0.5202, -0.52305, -0.52482, -0.52732, -0.52843, -0.5293, -0.52935, -0.52947, -0.52821, -0.52719, -0.5258, -0.52355, -0.51975, -0.51639, -0.51263, -0.50928, -0.50749, -0.50702, -0.50887, -0.51232, -0.51749, -0.52564, -0.53631, -0.54632, -0.55542, -0.56035, -0.56115, -0.558, -0.55183, -0.54248, -0.53066, -0.5174, -0.503, -0.48796, -0.47504],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Index',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_labor_market_resilience_0');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01"],
-                datasets: [{
-                    label: 'Unemployment Rate',
-                    data: [4.2, 4.2, 4.3, 4.1, 4.3, 4.3, 4.4, 4.5, 4.4, 4.3, 4.4],
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 4,
-                    fill: true,
-                    tension: 0.3,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#f8fafc',
-                        bodyColor: '#cbd5e1',
-                        borderColor: '#334155',
-                        borderWidth: 1,
-                        padding: 12,
-                        displayColors: false,
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: {
-                            maxTicksLimit: 8,
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        }
-                    },
-                    y: {
-                        grid: { color: 'rgba(148,163,184,0.12)' },
-                        ticks: {
-                            font: { size: 10 },
-                            color: '#94a3b8',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Percent',
-                            color: '#94a3b8',
-                            font: { size: 10 },
-                        }
-                    }
-                }
-            }
-        });
-    })();
-
-    (function() {
-        const ctx = document.getElementById('chart_labor_market_resilience_1');
-        if (!ctx) return;
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01"],
+                labels: ["2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01", "2026-03-01"],
                 datasets: [{
                     label: 'Total Nonfarm Payrolls',
-                    data: [158377.0, 158485.0, 158498.0, 158478.0, 158542.0, 158472.0, 158548.0, 158408.0, 158449.0, 158432.0, 158558.0, 158466.0],
+                    data: [158485.0, 158498.0, 158478.0, 158542.0, 158472.0, 158548.0, 158408.0, 158449.0, 158432.0, 158592.0, 158459.0, 158637.0],
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.08)',
                     borderWidth: 2,
@@ -1657,15 +855,15 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        const ctx = document.getElementById('chart_labor_market_resilience_2');
+        const ctx = document.getElementById('chart_labor_markets_and_fed_policy_recalibration_1');
         if (!ctx) return;
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["2025-03-29", "2025-04-05", "2025-04-12", "2025-04-19", "2025-04-26", "2025-05-03", "2025-05-10", "2025-05-17", "2025-05-24", "2025-05-31", "2025-06-07", "2025-06-14", "2025-06-21", "2025-06-28", "2025-07-05", "2025-07-12", "2025-07-19", "2025-07-26", "2025-08-02", "2025-08-09", "2025-08-16", "2025-08-23", "2025-08-30", "2025-09-06", "2025-09-13", "2025-09-20", "2025-09-27", "2025-10-04", "2025-10-11", "2025-10-18", "2025-10-25", "2025-11-01", "2025-11-08", "2025-11-15", "2025-11-22", "2025-11-29", "2025-12-06", "2025-12-13", "2025-12-20", "2025-12-27", "2026-01-03", "2026-01-10", "2026-01-17", "2026-01-24", "2026-01-31", "2026-02-07", "2026-02-14", "2026-02-21", "2026-02-28", "2026-03-07", "2026-03-14", "2026-03-21"],
+                labels: ["2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01", "2025-08-01", "2025-09-01", "2025-11-01", "2025-12-01", "2026-01-01", "2026-02-01", "2026-03-01"],
                 datasets: [{
-                    label: 'Initial Jobless Claims',
-                    data: [220000.0, 223000.0, 217000.0, 224000.0, 239000.0, 228000.0, 226000.0, 225000.0, 236000.0, 244000.0, 246000.0, 243000.0, 236000.0, 231000.0, 228000.0, 221000.0, 218000.0, 219000.0, 226000.0, 224000.0, 233000.0, 229000.0, 236000.0, 259000.0, 233000.0, 219000.0, 225000.0, 233000.0, 222000.0, 231000.0, 221000.0, 228000.0, 228000.0, 222000.0, 218000.0, 216000.0, 235000.0, 224000.0, 215000.0, 203000.0, 207000.0, 201000.0, 210000.0, 211000.0, 230000.0, 230000.0, 208000.0, 211000.0, 214000.0, 213000.0, 205000.0, 210000.0],
+                    label: 'Unemployment Rate',
+                    data: [4.2, 4.3, 4.1, 4.3, 4.3, 4.4, 4.5, 4.4, 4.3, 4.4, 4.3],
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.08)',
                     borderWidth: 2,
@@ -1707,7 +905,373 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         title: {
                             display: true,
-                            text: 'Number',
+                            text: 'Percent',
+                            color: '#94a3b8',
+                            font: { size: 10 },
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    (function() {
+        const ctx = document.getElementById('chart_energy_crisis_and_inflation_dynamics_0');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2026-01-02", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30"],
+                datasets: [{
+                    label: 'WTI Crude Oil Price',
+                    data: [57.21, 58.1, 56.97, 56.01, 57.74, 58.96, 59.39, 60.85, 61.84, 59.13, 59.4, 60.3, 60.38, 59.24, 60.7, 60.46, 62.04, 62.75, 64.77, 64.5, 61.6, 62.62, 64.56, 62.9, 63.77, 64.53, 64.2, 64.8, 63.08, 63.05, 62.53, 65.33, 66.66, 66.69, 66.36, 65.62, 65.3, 65.1, 66.96, 71.13, 74.48, 74.58, 80.88, 90.77, 94.65, 83.71, 86.8, 95.61, 98.48, 93.39, 96.01, 96.12, 96.11, 98.71, 89.33, 93.18, 91.51, 96.18, 101.26, 104.69],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            maxTicksLimit: 8,
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(148,163,184,0.12)' },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Dollars per Barrel',
+                            color: '#94a3b8',
+                            font: { size: 10 },
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    (function() {
+        const ctx = document.getElementById('chart_energy_crisis_and_inflation_dynamics_1');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03"],
+                datasets: [{
+                    label: '5-Year Breakeven Inflation',
+                    data: [2.31, 2.32, 2.36, 2.37, 2.36, 2.36, 2.39, 2.4, 2.42, 2.42, 2.46, 2.45, 2.47, 2.5, 2.52, 2.53, 2.52, 2.53, 2.51, 2.48, 2.5, 2.5, 2.47, 2.49, 2.45, 2.42, 2.39, 2.43, 2.43, 2.43, 2.4, 2.4, 2.42, 2.43, 2.4, 2.46, 2.46, 2.46, 2.51, 2.56, 2.56, 2.53, 2.58, 2.63, 2.61, 2.58, 2.62, 2.66, 2.61, 2.63, 2.53, 2.55, 2.51, 2.56, 2.56, 2.57, 2.54, 2.55, 2.57, 2.61],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            maxTicksLimit: 8,
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(148,163,184,0.12)' },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Percent',
+                            color: '#94a3b8',
+                            font: { size: 10 },
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    (function() {
+        const ctx = document.getElementById('chart_bond_markets_and_yield_curve_dynamics_0');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02"],
+                datasets: [{
+                    label: '10-Year Treasury Yield',
+                    data: [4.15, 4.19, 4.18, 4.19, 4.18, 4.15, 4.17, 4.24, 4.3, 4.26, 4.26, 4.24, 4.22, 4.24, 4.26, 4.24, 4.26, 4.29, 4.28, 4.29, 4.21, 4.22, 4.22, 4.16, 4.18, 4.09, 4.04, 4.05, 4.09, 4.08, 4.08, 4.03, 4.04, 4.05, 4.02, 3.97, 4.05, 4.06, 4.09, 4.13, 4.15, 4.12, 4.15, 4.21, 4.27, 4.28, 4.23, 4.2, 4.26, 4.25, 4.39, 4.34, 4.39, 4.33, 4.42, 4.44, 4.35, 4.3, 4.33, 4.31],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            maxTicksLimit: 8,
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(148,163,184,0.12)' },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Percent',
+                            color: '#94a3b8',
+                            font: { size: 10 },
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    (function() {
+        const ctx = document.getElementById('chart_bond_markets_and_yield_curve_dynamics_1');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03"],
+                datasets: [{
+                    label: '10Y-2Y Spread (Yield Curve)',
+                    data: [0.7, 0.64, 0.65, 0.65, 0.64, 0.61, 0.65, 0.7, 0.66, 0.65, 0.64, 0.66, 0.71, 0.7, 0.71, 0.74, 0.72, 0.71, 0.72, 0.74, 0.72, 0.74, 0.71, 0.66, 0.62, 0.64, 0.62, 0.62, 0.61, 0.6, 0.6, 0.61, 0.6, 0.6, 0.59, 0.58, 0.55, 0.55, 0.56, 0.59, 0.56, 0.58, 0.57, 0.51, 0.55, 0.55, 0.52, 0.5, 0.46, 0.51, 0.51, 0.49, 0.49, 0.46, 0.56, 0.53, 0.51, 0.52, 0.52, 0.51],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            maxTicksLimit: 8,
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(148,163,184,0.12)' },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Percent',
+                            color: '#94a3b8',
+                            font: { size: 10 },
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    (function() {
+        const ctx = document.getElementById('chart_financial_stability_and_global_risks_0');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2025-04-04", "2025-04-11", "2025-04-18", "2025-04-25", "2025-05-02", "2025-05-09", "2025-05-16", "2025-05-23", "2025-05-30", "2025-06-06", "2025-06-13", "2025-06-20", "2025-06-27", "2025-07-04", "2025-07-11", "2025-07-18", "2025-07-25", "2025-08-01", "2025-08-08", "2025-08-15", "2025-08-22", "2025-08-29", "2025-09-05", "2025-09-12", "2025-09-19", "2025-09-26", "2025-10-03", "2025-10-10", "2025-10-17", "2025-10-24", "2025-10-31", "2025-11-07", "2025-11-14", "2025-11-21", "2025-11-28", "2025-12-05", "2025-12-12", "2025-12-19", "2025-12-26", "2026-01-02", "2026-01-09", "2026-01-16", "2026-01-23", "2026-01-30", "2026-02-06", "2026-02-13", "2026-02-20", "2026-02-27", "2026-03-06", "2026-03-13", "2026-03-20", "2026-03-27"],
+                datasets: [{
+                    label: 'Chicago Fed National Financial Conditions',
+                    data: [-0.39692, -0.38618, -0.38659, -0.39309, -0.40638, -0.42359, -0.44104, -0.4557, -0.4676, -0.4768, -0.48431, -0.49077, -0.49747, -0.50443, -0.51094, -0.51595, -0.52017, -0.523, -0.52477, -0.52727, -0.52838, -0.52925, -0.52931, -0.52941, -0.52813, -0.52708, -0.52568, -0.52341, -0.51964, -0.51632, -0.51262, -0.50934, -0.5076, -0.50715, -0.50902, -0.51239, -0.51738, -0.52552, -0.53609, -0.54614, -0.55552, -0.56093, -0.56217, -0.55938, -0.55317, -0.54313, -0.52969, -0.51349, -0.49443, -0.47357, -0.45389, -0.43366],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            maxTicksLimit: 8,
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(148,163,184,0.12)' },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Index',
+                            color: '#94a3b8',
+                            font: { size: 10 },
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    (function() {
+        const ctx = document.getElementById('chart_financial_stability_and_global_risks_1');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01"],
+                datasets: [{
+                    label: 'VIX (Volatility Index)',
+                    data: [15.45, 14.49, 15.12, 15.98, 16.75, 15.84, 15.86, 18.84, 20.09, 16.9, 15.64, 16.09, 16.15, 16.35, 16.35, 16.88, 17.44, 16.34, 18.0, 18.64, 21.77, 17.76, 17.36, 17.79, 17.65, 20.82, 20.6, 21.2, 20.29, 19.62, 20.23, 19.09, 21.01, 19.55, 17.93, 18.63, 19.86, 21.44, 23.57, 21.15, 23.75, 29.49, 25.5, 24.93, 24.23, 27.29, 27.19, 23.51, 22.37, 25.09, 24.06, 26.78, 26.15, 26.95, 25.33, 27.44, 31.05, 30.61, 25.25, 24.54],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            maxTicksLimit: 8,
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(148,163,184,0.12)' },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#94a3b8',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Index',
                             color: '#94a3b8',
                             font: { size: 10 },
                         }
